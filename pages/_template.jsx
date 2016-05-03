@@ -12,18 +12,7 @@ module.exports = React.createClass({
   },
   render () {
     return (
-      <div>
-        <div>
-          <Link
-            to={prefixLink('/')}
-            style={{
-              color: 'black',
-              textDecoration: 'none',
-            }}
-          >
-            völlig ohne
-          </Link>
-        </div>
+      <div className="vo-wrapper">
         <div>
           {this.props.children}
         </div>
