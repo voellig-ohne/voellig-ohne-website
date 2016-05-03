@@ -8,7 +8,6 @@ import Isvg from 'react-inlinesvg'
 export default class Projects extends React.Component {
 
 	render () {
-		console.log(this);
 		const projectList = [];
 
 		const currentPath = this.props.route.page.path
@@ -18,13 +17,17 @@ export default class Projects extends React.Component {
 		})
 
 		projects.forEach((page) => {
+			const backgroundImage = {
+				backgroundImage: `url(${page.path}${page.data.mainImage})`
+			}
+
 			projectList.push(
-				<li className="vo-project">
+				<li className="vo-project_list-item"
+						style={backgroundImage}>
 					<Link to={prefixLink(page.path)}>
-						<img src={`${page.path}${page.data.mainImage}`} 
-								className="vo-project-image" />
-						<div className="vo-project-description">
-							{page.data.title}
+						<div className="vo-project_list-item-description">
+							{page.data.title}<br />
+							{page.data.date}
 						</div>
 					</Link>
 				</li>
@@ -38,7 +41,7 @@ export default class Projects extends React.Component {
             <h1>
               Projekte
             </h1>
-            <ul>
+            <ul className="vo-project_list">
             	{projectList}
             </ul>
           </main>

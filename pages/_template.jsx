@@ -12,7 +12,7 @@ module.exports = React.createClass({
   },
   render () {
     return (
-      <div>
+      <div className="vo-project">
         {this.props.children}
       </div>
     )

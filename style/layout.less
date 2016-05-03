@@ -59,4 +59,38 @@ a {
 	    flex-direction: column;
 	    text-align: center;
 	}
+
+	&-project_list {
+		padding: 0;
+
+		&-item {
+			list-style: none;
+			background-position: center;
+			background-size: cover;
+			margin-bottom: 1rem;
+
+			a {
+				min-height: 10rem;
+				padding: 1rem;	
+				display: block;
+
+				&:after {
+					content: none;
+				}
+			}
+
+
+			&-description {
+				padding: 1rem;
+				background: white;
+				max-width: 22rem;
+			}
+		}
+	}
+
+	&-project {
+		img {
+			width: 100%;
+		}
+	}
 }
