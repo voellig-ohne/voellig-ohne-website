@@ -1,9 +1,6 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
-
 import { prefixLink } from 'gatsby-helpers'
-import { TypographyStyle } from 'utils/typography'
-
 
 module.exports = React.createClass({
   propTypes () {
@@ -30,7 +27,6 @@ module.exports = React.createClass({
           />
           <title>{title}</title>
           <link rel="shortcut icon" href={this.props.favicon} />
-          <TypographyStyle />
           {cssLink}
         </head>
         <body>

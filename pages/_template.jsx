@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
-import Headroom from 'react-headroom'
 
-import { rhythm } from 'utils/typography'
 
 module.exports = React.createClass({
   propTypes () {
