@@ -10,7 +10,7 @@ export default class Sass extends React.Component {
     return (
       <DocumentTitle title={config.siteTitle}>
         
-        <div>
+        <div className="vo-wrapper">
           <div className="vo-intro">
             <Link to={prefixLink('/')}>
               <div className="vo-logo">
@@ -19,7 +19,11 @@ export default class Sass extends React.Component {
               </div>
             </Link>
           </div>
-          <Link to={prefixLink('/projekte/planetarium/')}>planetarium</Link>
+          <main>
+            <p>
+              <Link to={prefixLink('/projekte/')}>pojekte</Link>
+            </p>
+          </main>
         </div>
 
       </DocumentTitle>
