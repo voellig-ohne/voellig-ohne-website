@@ -18,27 +18,26 @@ export default class Projects extends React.Component {
 		})
 
 		projects.forEach((page) => {
-			console.log(page)
 			projectList.push(
-				<li>
+				<li className="vo-project">
 					<Link to={prefixLink(page.path)}>
-						{page.data.title}
+						<img src={`${page.path}${page.data.mainImage}`} 
+								className="vo-project-image" />
+						<div className="vo-project-description">
+							{page.data.title}
+						</div>
 					</Link>
 				</li>
 			)
 		})
 
-		console.log(projects)
-
-		console.log('hello?!')
-
     return (
       <DocumentTitle title={`${config.siteTitle} | projekte`}>
         
           <main>
-            <p>
-              all our projects so far:
-            </p>
+            <h1>
+              Projekte
+            </h1>
             <ul>
             	{projectList}
             </ul>
