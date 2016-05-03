@@ -12,10 +12,8 @@ module.exports = React.createClass({
   },
   render () {
     return (
-      <div className="vo-wrapper">
-        <div>
-          {this.props.children}
-        </div>
+      <div>
+        {this.props.children}
       </div>
     )
   },
