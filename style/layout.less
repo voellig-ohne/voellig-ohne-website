@@ -65,12 +65,21 @@ a {
 
 		&-item {
 			list-style: none;
-			background-position: center;
-			background-size: cover;
-			margin-bottom: 1rem;
+			margin-bottom: 2rem;
+			position: relative;
+
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+			}
 
 			a {
-				min-height: 10rem;
+				min-height: 20rem;
 				padding: 1rem;	
 				display: block;
 
