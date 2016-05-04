@@ -22,7 +22,7 @@ export default class Projects extends React.Component {
 
 			const subDir = page.path.replace(currentPath, '')
 
-			let responsiveImage = require('responsive?sizes[]=100,sizes[]=500,sizes[]=1000!./' + subDir + page.data.mainImage + '.jpg')
+			let responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000!./' + subDir + page.data.mainImage + '.jpg')
 
 			projectList.push(
 				<li className="vo-project_list-item">
