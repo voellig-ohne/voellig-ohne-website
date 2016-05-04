@@ -1,6 +1,6 @@
 ---
-title: metcat
-mainImage: IMG_4378.jpg
+title: metcati
+mainImage: IMG_4378
 ---
 
 ![planetariumsbild](IMG_4378.jpg)

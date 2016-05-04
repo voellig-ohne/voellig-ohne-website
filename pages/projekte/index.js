@@ -20,10 +20,14 @@ export default class Projects extends React.Component {
 				backgroundImage: `url(${page.path}${page.data.mainImage})`
 			}
 
+			const subDir = page.path.replace(currentPath, '')
+
+			let responsiveImage = require('responsive?sizes[]=100,sizes[]=500,sizes[]=1000!./' + subDir + page.data.mainImage + '.jpg')
+
 			projectList.push(
-				<li className="vo-project_list-item"
-						style={backgroundImage}>
+				<li className="vo-project_list-item">
 					<Link to={prefixLink(page.path)}>
+						<img srcSet={responsiveImage.srcSet} src={responsiveImage.src} />
 						<div className="vo-project_list-item-description">
 							{page.data.title}<br />
 							{page.data.date}
