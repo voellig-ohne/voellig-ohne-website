@@ -15,6 +15,10 @@ module.exports = React.createClass({
             {
                 target: '/projekte/',
                 title: 'projekte'
+            },
+            {
+                target: '/vo/',
+                title: 'über uns'
             }
         ]
 
