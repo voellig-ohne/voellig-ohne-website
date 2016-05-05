@@ -27,7 +27,11 @@ body {
 	}
 
 	&-wrapper {
-		
+		transition: @transitionTime all;
+
+		.vo-root & {
+			transform: translateY(100%);
+		}
 	}
 
 	&-project {
@@ -37,7 +41,6 @@ body {
 	}
 
 	&-trenner {
-		// height: .5rem;
 		margin: 1rem 0 .5rem;
 
 		&:after {

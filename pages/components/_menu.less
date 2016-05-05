@@ -1,9 +1,14 @@
 .vo_menu {
     padding: 0;
+    transition: .3s all;
 
     li {
         list-style: none;
         display: inline;
         margin: 0 .5em;
+    }
+
+    .vo-root & {
+        transform: translateY(~"calc(100vh - 5rem)");
     }
 }

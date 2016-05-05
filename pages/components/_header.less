@@ -2,15 +2,14 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 10rem;
-    transition: .3s all;
-    overflow: hidden;
+    height: 5rem;
 
     &-logo {
         padding: 1rem;
         flex-grow: 1;
         display: flex;
         align-items: center;
+        transition: .3s all;
 
         &:after {
             content: none;
@@ -19,9 +18,27 @@
         svg {
             height: 4rem;
         }
+
+        .vo-root & {
+            transform: translateY(~"calc(50vh - 50%)");
+        }
     }
 
-    .vo-root & {
-        height: 100vh;
+    &-v {
+        transform: translateY(-6rem);
+        transition: .3s all;
+
+        .vo-root & {
+            transform: translateY(0);
+        }
+    }
+
+    &-sternchen {
+        transform: translateY(2.3rem) translateX(-2.1rem);
+        transition: .3s all;
+
+        .vo-root & {
+            transform: translateY(0) translateX(0);
+        }
     }
 }

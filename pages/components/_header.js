@@ -17,9 +17,9 @@ module.exports = React.createClass({
         return (
             <nav className="vo_header">
                 <Link to={prefixLink('/')} className="vo_header-logo">
-                    <span dangerouslySetInnerHTML={{ __html: v }}>
+                    <span className="vo_header-v" dangerouslySetInnerHTML={{ __html: v }}>
                     </span>
-                    <span dangerouslySetInnerHTML={{ __html: sternchen }}>
+                    <span className="vo_header-sternchen" dangerouslySetInnerHTML={{ __html: sternchen }}>
                     </span>
                 </Link>
                 <Menu></Menu>
