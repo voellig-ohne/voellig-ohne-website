@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
+import sternchen from 'pages/sternchen.svg'
 
 export default class Projects extends React.Component {
 
@@ -29,8 +30,13 @@ export default class Projects extends React.Component {
 					<Link to={prefixLink(page.path)}>
 						<img srcSet={responsiveImage.srcSet} src={responsiveImage.src} />
 						<div className="vo-project_list-item-description">
-							{page.data.title}<br />
-							{page.data.date}
+							<h2>{page.data.title}</h2>
+							<div>{page.data.description}</div>
+							<div className="vo-trenner"/>
+							<div>{page.data.date}</div>
+							<div>{page.data.what}</div>
+							<div className="vo-trenner"/>
+							<div>{page.data.what2}</div>
 						</div>
 					</Link>
 				</li>

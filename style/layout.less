@@ -67,6 +67,7 @@ a {
 			list-style: none;
 			margin-bottom: 2rem;
 			position: relative;
+			text-align: center;
 
 			img {
 				height: 100%;
@@ -88,11 +89,15 @@ a {
 				}
 			}
 
+			h2 {
+				margin: 0;
+			}
+
 
 			&-description {
 				padding: 1rem;
 				background: white;
-				max-width: 22rem;
+				max-width: 25rem;
 			}
 		}
 	}
@@ -118,5 +123,14 @@ a {
 	&-header {
 		display: flex;
 		justify-content: space-around;
+	}
+
+	&-trenner {
+		// height: .5rem;
+		margin: 1rem 0 .5rem;
+
+		&:after {
+			content: '**';
+		}
 	}
 }
