@@ -10,15 +10,32 @@ module.exports = React.createClass({
         }
     },
     render () {
+        const links = [
+            {
+                target: '/projekte/',
+                title: 'projektee'
+            }
+        ]
+
+        const renderedLinks = links.map((link) => {
+            return (
+                <li key={link.target}>
+                    <Link to={prefixLink(link.target)}
+                        activeClassName="vo-link-active">
+                        {link.title}
+                    </Link>
+                </li>
+            )
+        });
+
         return (
             <nav className="vo-header">
                 <Link to={prefixLink('/')} className="vo-sternchen"
                     dangerouslySetInnerHTML={{ __html: sternchen }}>
                 </Link>
-                <Link to={prefixLink('/projekte/')}
-                    activeClassName="vo-link-active">
-                    projekte
-                </Link>
+                <menu class="vo-menu">
+                    {renderedLinks}
+                </menu>
             </nav>
         )
     },
