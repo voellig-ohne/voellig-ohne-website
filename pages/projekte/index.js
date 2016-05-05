@@ -5,6 +5,8 @@ import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 import sternchen from 'pages/sternchen.svg'
 
+import './project-list.less'
+
 export default class Projects extends React.Component {
 
 	render () {
@@ -26,11 +28,11 @@ export default class Projects extends React.Component {
 			let responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000!./' + subDir + page.data.mainImage + '.jpg')
 
 			projectList.push(
-				<li className="vo-project_list-item"
+				<li className="vo_project_list-item"
 					key={page.path}>
 					<Link to={prefixLink(page.path)}>
 						<img srcSet={responsiveImage.srcSet} src={responsiveImage.src} />
-						<div className="vo-project_list-item-description">
+						<div className="vo_project_list-description">
 							<h2>{page.data.title}</h2>
 							<div>{page.data.description}</div>
 							<div className="vo-trenner"/>
@@ -51,7 +53,7 @@ export default class Projects extends React.Component {
             <h1>
               Projekte
             </h1>
-            <ul className="vo-project_list">
+            <ul className="vo_project_list">
             	{projectList}
             </ul>
           </main>

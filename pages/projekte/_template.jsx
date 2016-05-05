@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import sternchen from 'pages/sternchen.svg'
-import Header from 'pages/_header.js'
+import Header from 'pages/components/_header.js'
 
 module.exports = React.createClass({
   propTypes () {

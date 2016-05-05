@@ -1,0 +1,40 @@
+.vo_project_list {
+    padding: 0;
+
+    &-item {
+        list-style: none;
+        margin-bottom: 2rem;
+        position: relative;
+        text-align: center;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        a {
+            min-height: 20rem;
+            padding: 1rem;
+            display: block;
+
+            &:after {
+                content: none;
+            }
+        }
+
+        h2 {
+            margin: 0;
+        }
+    }
+
+    &-description {
+        padding: 1rem;
+        background: white;
+        max-width: 25rem;
+    }
+}

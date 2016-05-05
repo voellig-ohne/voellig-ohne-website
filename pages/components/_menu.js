@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 
+import './_menu.less'
+
 module.exports = React.createClass({
     propTypes () {
         return {
@@ -28,7 +30,7 @@ module.exports = React.createClass({
         });
 
         return (
-            <menu className="vo-menu">
+            <menu className="vo_menu">
                 {renderedLinks}
             </menu>
         )
