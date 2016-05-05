@@ -26,7 +26,8 @@ export default class Projects extends React.Component {
 			let responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000!./' + subDir + page.data.mainImage + '.jpg')
 
 			projectList.push(
-				<li className="vo-project_list-item">
+				<li className="vo-project_list-item"
+					key={page.path}>
 					<Link to={prefixLink(page.path)}>
 						<img srcSet={responsiveImage.srcSet} src={responsiveImage.src} />
 						<div className="vo-project_list-item-description">
@@ -45,7 +46,7 @@ export default class Projects extends React.Component {
 
     return (
       <DocumentTitle title={`${config.siteTitle} | projekte`}>
-        
+
           <main>
             <h1>
               Projekte
