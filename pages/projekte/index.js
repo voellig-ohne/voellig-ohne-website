@@ -50,9 +50,6 @@ export default class Projects extends React.Component {
       <DocumentTitle title={`${config.siteTitle} | projekte`}>
 
           <main>
-            <h1>
-              Projekte
-            </h1>
             <ul className="vo_project_list">
             	{projectList}
             </ul>
