@@ -4,12 +4,13 @@ import { prefixLink } from 'gatsby-helpers'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 import vsternchen from 'pages/vsternchen.svg'
+import Menu from 'pages/components/_menu.js'
 
-export default class Sass extends React.Component {
+export default class Index extends React.Component {
   render () {
     return (
       <DocumentTitle title={config.siteTitle}>
-        
+
         <div className="vo-wrapper">
           <div className="vo-intro">
             <Link to={prefixLink('/')}>
@@ -19,9 +20,7 @@ export default class Sass extends React.Component {
             </Link>
           </div>
           <main>
-            <p>
-              <Link to={prefixLink('/projekte/')}>pojekte</Link>
-            </p>
+            <Menu></Menu>
           </main>
         </div>
 
