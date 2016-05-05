@@ -33,6 +33,7 @@
     "eslint-plugin-jsx-a11y": "^1.0.4",
     "eslint-plugin-react": "^5.0.1",
     "jimp": "^0.2.24",
+    "react-addons-css-transition-group": "^15.0.2",
     "responsive-loader": "^0.5.0",
     "svg-inline-loader": "^0.4.1"
   },
