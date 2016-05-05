@@ -14,7 +14,7 @@ a {
 	position: relative;
 	display: inline-block;
 
-	&:hover {
+	&:hover, &.vo-link-active {
 		&:after {
 			transform: translateY(-7px);
 			height: 3px;
@@ -81,7 +81,7 @@ a {
 
 			a {
 				min-height: 20rem;
-				padding: 1rem;	
+				padding: 1rem;
 				display: block;
 
 				&:after {
