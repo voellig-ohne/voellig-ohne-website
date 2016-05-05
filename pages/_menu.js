@@ -28,7 +28,7 @@ module.exports = React.createClass({
         });
 
         return (
-            <menu class="vo-menu">
+            <menu className="vo-menu">
                 {renderedLinks}
             </menu>
         )
