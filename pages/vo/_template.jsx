@@ -13,7 +13,6 @@ module.exports = React.createClass({
   render () {
     return (
       <div>
-        <Header></Header>
         <div>
           {this.props.children}
         </div>
