@@ -19,7 +19,7 @@ module.exports = React.createClass({
         return (
             <div className={isRoot ? 'vo-root': ''}>
                 <Header></Header>
-                <div>
+                <div className="vo-wrapper">
                     {this.props.children}
                 </div>
             </div>

@@ -6,7 +6,22 @@
     transition: .3s all;
     overflow: hidden;
 
+    &-logo {
+        padding: 1rem;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+
+        &:after {
+            content: none;
+        }
+
+        svg {
+            height: 4rem;
+        }
+    }
+
     .vo-root & {
-        height: 0;
+        height: 100vh;
     }
 }

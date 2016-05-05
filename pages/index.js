@@ -11,17 +11,7 @@ export default class Index extends React.Component {
     return (
       <DocumentTitle title={config.siteTitle}>
 
-        <div className="vo-wrapper">
-          <div className="vo-intro">
-            <Link to={prefixLink('/')}>
-              <div className="vo-logo">
-                <div dangerouslySetInnerHTML={{ __html: vsternchen }} />
-              </div>
-            </Link>
-          </div>
-          <main>
-            <Menu></Menu>
-          </main>
+        <div>
         </div>
 
       </DocumentTitle>
