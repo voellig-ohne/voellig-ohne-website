@@ -6,6 +6,7 @@
         margin-bottom: 2rem;
         position: relative;
         text-align: center;
+        overflow: hidden;
 
         img {
             height: 100%;
@@ -18,9 +19,11 @@
         }
 
         a {
-            min-height: 20rem;
+            height: 20rem;
             padding: 1rem;
             display: block;
+            overflow: hidden;
+            transition: .3s all;
 
             &:after {
                 content: none;
@@ -29,6 +32,22 @@
 
         h2 {
             margin: 0;
+        }
+
+        &.passive {
+            margin: 0;
+
+            a {
+                height: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        &.active {
+            a {
+                height: 40rem;
+            }
         }
     }
 
