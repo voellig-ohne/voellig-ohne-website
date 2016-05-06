@@ -1,5 +1,6 @@
 .vo_project_list {
     padding: 0;
+    margin: 0;
 
     &-item {
         list-style: none;
@@ -18,7 +19,7 @@
             z-index: -1;
         }
 
-        a {
+        > a {
             height: 20rem;
             padding: 1rem;
             display: block;
@@ -37,7 +38,7 @@
         &.passive {
             margin: 0;
 
-            a {
+            > a {
                 height: 0;
                 padding-top: 0;
                 padding-bottom: 0;
@@ -45,8 +46,9 @@
         }
 
         &.active {
-            a {
-                height: 40rem;
+            margin: 0;
+            > a {
+                height: ~"calc(100vh - 5rem)";
             }
         }
     }
@@ -55,5 +57,9 @@
         padding: 1rem;
         background: white;
         max-width: 25rem;
+    }
+
+    &-body {
+
     }
 }
