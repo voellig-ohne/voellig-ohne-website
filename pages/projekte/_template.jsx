@@ -37,21 +37,23 @@ module.exports = React.createClass({
             projectList.push(
                 <li className={classNames}
                     key={page.path}>
-                    <Link to={prefixLink(page.path)}>
-                        <img srcSet={responsiveImage.srcSet} src={responsiveImage.src} />
-                        <div className="vo_project_list-description">
-                            <h2>{page.data.title}</h2>
-                            <div>{page.data.description}</div>
-                            <div className="vo-trenner"/>
-                            <div>{page.data.date}</div>
-                            <div>{page.data.what}</div>
-                            <div className="vo-trenner"/>
-                            <div>{page.data.what2}</div>
-                            <div className="vo_project_list-body"
-                                dangerouslySetInnerHTML={{ __html: page.data.body }}>
-                            </div>
-                        </div>
+                    <Link to={prefixLink(page.path)}
+                        className="vo_project_list-link">
+                        mehr infos
                     </Link>
+                    <img srcSet={responsiveImage.srcSet} src={responsiveImage.src} />
+                    <div className="vo_project_list-description">
+                        <h2>{page.data.title}</h2>
+                        <div>{page.data.description}</div>
+                        <div className="vo-trenner"/>
+                        <div>{page.data.date}</div>
+                        <div>{page.data.what}</div>
+                        <div className="vo-trenner"/>
+                        <div>{page.data.what2}</div>
+                        <div className="vo_project_list-body"
+                            dangerouslySetInnerHTML={{ __html: page.data.body }}>
+                        </div>
+                    </div>
                 </li>
             )
         })

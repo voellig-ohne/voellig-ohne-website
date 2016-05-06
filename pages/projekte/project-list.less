@@ -8,6 +8,11 @@
         position: relative;
         text-align: center;
         overflow: hidden;
+        height: 20rem;
+        padding: 1rem;
+        display: block;
+        overflow: hidden;
+        transition: .3s all;
 
         img {
             height: 100%;
@@ -19,37 +24,38 @@
             z-index: -1;
         }
 
-        > a {
-            height: 20rem;
-            padding: 1rem;
-            display: block;
-            overflow: hidden;
-            transition: .3s all;
-
-            &:after {
-                content: none;
-            }
-        }
-
         h2 {
             margin: 0;
         }
 
         &.passive {
             margin: 0;
-
-            > a {
-                height: 0;
-                padding-top: 0;
-                padding-bottom: 0;
-            }
+            height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
         }
 
         &.active {
             margin: 0;
-            > a {
-                height: ~"calc(100vh - 5rem)";
+            height: ~"calc(100vh - 5rem)";
+
+            .vo_project_list-link {
+                display: none;
             }
+        }
+    }
+
+    &-link {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: block;
+        z-index: 1;
+        margin: -1rem;
+        font-size: 0;
+
+        &:after {
+            content: none;
         }
     }
 
