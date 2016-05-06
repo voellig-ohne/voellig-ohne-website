@@ -33,7 +33,7 @@ module.exports = React.createClass({
             console.log(page.path)
             let classNames = 'vo_project_list-item';
 
-            if(this.props.location.pathname !== currentPath) {
+            if (this.props.location.pathname !== currentPath) {
                 classNames += (this.props.location.pathname === page.path) ? ' active' : ' passive';
             }
 
@@ -50,6 +50,9 @@ module.exports = React.createClass({
                             <div>{page.data.what}</div>
                             <div className="vo-trenner"/>
                             <div>{page.data.what2}</div>
+                            <div className="vo_project_list-body"
+                                dangerouslySetInnerHTML={{ __html: page.data.body }}>
+                            </div>
                         </div>
                     </Link>
                 </li>
