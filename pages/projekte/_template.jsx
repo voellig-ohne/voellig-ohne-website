@@ -19,8 +19,6 @@ module.exports = React.createClass({
             return page.path.startsWith(currentPath) && page.path !== currentPath
         })
 
-        console.log(this.props.location.pathname)
-
         projects.forEach((page) => {
             const backgroundImage = {
                 backgroundImage: `url(${page.path}${page.data.mainImage})`
@@ -30,7 +28,6 @@ module.exports = React.createClass({
 
             let responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000!./' + subDir + page.data.mainImage + '.jpg')
 
-            console.log(page.path)
             let classNames = 'vo_project_list-item';
 
             if (this.props.location.pathname !== currentPath) {
