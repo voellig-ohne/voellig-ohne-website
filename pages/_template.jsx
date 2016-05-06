@@ -12,8 +12,6 @@ module.exports = React.createClass({
         }
     },
     render () {
-        console.log(this.props.location.pathname)
-
         const isRoot = this.props.location.pathname === '/'
 
         return (
