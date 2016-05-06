@@ -66,7 +66,6 @@ module.exports = React.createClass({
                         {projectList}
                     </ul>
                 </main>
-                {this.props.children}
             </div>
         )
     },
