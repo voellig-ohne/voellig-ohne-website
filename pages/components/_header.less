@@ -9,11 +9,14 @@
     background: #F8F9F6;
 
     &-logo {
+        position: absolute;
         padding: 1rem;
         flex-grow: 1;
         display: flex;
         align-items: center;
         transition: .3s all;
+        left: 50%;
+        margin-left: -4rem;
 
         &:after {
             content: none;
@@ -24,7 +27,7 @@
         }
 
         .vo-root & {
-            transform: translateY(~"calc(50vh - 50%)");
+            transform: translateY(~"calc(50vh - 50% - 1rem)");
         }
     }
 
@@ -38,7 +41,7 @@
     }
 
     &-sternchen {
-        transform: translateY(2.3rem) translateX(-2.1rem);
+        transform: translateY(0.1rem) translateX(-2.6rem);
         transition: .3s all;
 
         .vo-root & {

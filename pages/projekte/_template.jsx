@@ -38,7 +38,8 @@ module.exports = React.createClass({
                 <li className={classNames}
                     key={page.path}>
                     <Link to={prefixLink(page.path)}
-                        className="vo_project_list-link">
+                        className="vo_project_list-link"
+                        ignoreScrollBehavior={true}>
                         mehr infos
                     </Link>
                     <img srcSet={responsiveImage.srcSet} src={responsiveImage.src} />
