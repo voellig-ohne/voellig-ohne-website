@@ -1,3 +1,5 @@
+@import "../../style/vars";
+
 .vo_header {
     display: flex;
     align-items: center;
@@ -14,7 +16,7 @@
         flex-grow: 1;
         display: flex;
         align-items: center;
-        transition: .3s all;
+        transition: @transitionTime @transitionEase all;
         left: 50%;
         margin-left: -4rem;
 
@@ -33,7 +35,7 @@
 
     &-v {
         transform: translateY(-6rem);
-        transition: .3s all;
+        transition: @transitionTime @transitionEase all;
 
         .vo-root & {
             transform: translateY(0);
@@ -42,7 +44,7 @@
 
     &-sternchen {
         transform: translateY(0.1rem) translateX(-2.6rem);
-        transition: .3s all;
+        transition: @transitionTime @transitionEase all;
 
         .vo-root & {
             transform: translateY(0) translateX(0);
