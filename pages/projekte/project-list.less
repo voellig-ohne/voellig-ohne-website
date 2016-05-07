@@ -20,7 +20,7 @@
             height: 100%;
             width: 100%;
             object-fit: cover;
-            position: absolute;
+            position: absolute;;
             top: 0;
             left: 0;
             z-index: -1;
@@ -35,11 +35,35 @@
             height: 0;
             padding-top: 0;
             padding-bottom: 0;
+
         }
 
         &.active {
             margin: 0;
             height: ~"calc(100vh - 5rem)";
+            overflow: scroll;
+
+            img {
+                position: fixed;
+                animation-name: makeFixed;
+                animation-duration: @transitionTime;
+                margin-top: 5rem;
+                height: ~"calc(100vh - 5rem)";
+
+                @keyframes makeFixed {
+                    from {
+                        margin-top: 0;
+                        position: absolute;
+                        height: 100%;
+                    }
+
+                    to {
+                        margin-top: 0;
+                        position: absolute;
+                        height: 100%;
+                    }
+                }
+            }
 
             .vo_project_list-link {
                 display: none;
