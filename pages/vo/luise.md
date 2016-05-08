@@ -3,4 +3,10 @@ image: luise
 name: luise wilhelm
 ---
 
-text about luise.
+freie grafikdesignerin
+
+\*\*
+
+bachelor of design  
+(grafik design)  
+hku utrecht

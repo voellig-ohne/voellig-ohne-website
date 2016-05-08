@@ -3,4 +3,11 @@ image: timur
 name: timur çelikel
 ---
 
-text about timur.
+UI/UX–gestalter  
+softwareentwickler
+
+\*\*
+
+bachelor of science  
+(digitale medien)  
+Universität Bremen

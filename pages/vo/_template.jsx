@@ -31,7 +31,11 @@ module.exports = React.createClass({
                     <h1>{page.data.name}</h1>
                     <img
                         className="vo_about-image"
+                        sizes="(min-width: 25rem) 50vw, 25rem"
                         srcSet={responsiveImage.srcSet} src={responsiveImage.src} />
+                    <div className="vo_about-body"
+                        dangerouslySetInnerHTML={{ __html: page.data.body }}>
+                    </div>
                 </section>
             )
         })
