@@ -3,6 +3,8 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import sternchen from 'pages/sternchen.svg'
 import Header from 'pages/components/_header.js'
+import DocumentTitle from 'react-document-title'
+import { config } from 'config'
 
 import './project-list.less'
 
@@ -30,8 +32,8 @@ module.exports = React.createClass({
 
             let responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000!./' + subDir + page.data.mainImage + '.jpg')
 
+            // WORST HACK DAMN IT
             const srcSet = responsiveImage.images.map((image) => {
-                // WORST HACK DAMN IT
                 const linkPrefix = (process.env.NODE_ENV === 'production') ? '/' : '';
                 return linkPrefix + prefixLink(image.path) + ' ' + image.width + 'w'
             }).join(', ')
@@ -67,13 +69,15 @@ module.exports = React.createClass({
         })
 
         return (
-            <div>
-                <main>
-                    <ul className="vo_project_list">
-                        {projectList}
-                    </ul>
-                </main>
-            </div>
+            <DocumentTitle title={`${config.siteTitle} | projekte`}>
+                <div>
+                    <main>
+                        <ul className="vo_project_list">
+                            {projectList}
+                        </ul>
+                    </main>
+                </div>
+            </DocumentTitle>
         )
     },
 })
