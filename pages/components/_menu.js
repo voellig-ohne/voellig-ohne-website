@@ -18,7 +18,7 @@ module.exports = React.createClass({
             },
             {
                 target: '/vo/',
-                title: 'über uns'
+                title: 'wir sind'
             }
         ]
 
