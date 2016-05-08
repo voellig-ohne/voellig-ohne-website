@@ -30,6 +30,12 @@ module.exports = React.createClass({
 
             let responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000!./' + subDir + page.data.mainImage + '.jpg')
 
+            const srcSet = responsiveImage.images.map((image) => {
+                // WORST HACK DAMN IT
+                const linkPrefix = (process.env.NODE_ENV === 'production') ? '/' : '';
+                return linkPrefix + prefixLink(image.path) + ' ' + image.width + 'w'
+            }).join(', ')
+
             let classNames = 'vo_project_list-item';
 
             if (this.props.location.pathname !== currentPath) {
@@ -43,7 +49,7 @@ module.exports = React.createClass({
                         className="vo_project_list-link">
                         mehr infos
                     </Link>
-                    <img srcSet={responsiveImage.srcSet} src={responsiveImage.src} />
+                    <img srcSet={srcSet} src={responsiveImage.src} />
                     <div className="vo_project_list-description">
                         <h2>{page.data.title}</h2>
                         <div>{page.data.description}</div>
