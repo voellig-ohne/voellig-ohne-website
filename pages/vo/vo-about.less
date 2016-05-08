@@ -2,7 +2,28 @@
 
 .vo_about {
     max-width: @mainWidth;
-    margin: 0 auto;
-    background: white;
-    padding: 1rem;
+    margin: -1rem auto 1rem;
+    display: flex;
+    flex-wrap: wrap;
+
+
+    &-section {
+        margin: 1rem;
+        background: white;
+        padding: 1rem;
+    }
+
+    &-description {
+        width: 100%;
+    }
+
+    &-member {
+        flex-grow: 1;
+        flex-basis: ~"calc(50% - 2rem)";
+        min-width: 20rem;
+    }
+
+    &-image {
+        width: 100%;
+    }
 }
