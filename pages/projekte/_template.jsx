@@ -4,6 +4,8 @@ import { prefixLink } from 'gatsby-helpers'
 import sternchen from 'pages/sternchen.svg'
 import Header from 'pages/components/_header.js'
 
+import './project-list.less'
+
 module.exports = React.createClass({
     propTypes () {
         return {
@@ -38,8 +40,7 @@ module.exports = React.createClass({
                 <li className={classNames}
                     key={page.path}>
                     <Link to={prefixLink(page.path)}
-                        className="vo_project_list-link"
-                        ignoreScrollBehavior={true}>
+                        className="vo_project_list-link">
                         mehr infos
                     </Link>
                     <img srcSet={responsiveImage.srcSet} src={responsiveImage.src} />

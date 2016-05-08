@@ -5,8 +5,6 @@ import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 import sternchen from 'pages/sternchen.svg'
 
-import './project-list.less'
-
 export default class Projects extends React.Component {
 
 	render () {
