@@ -47,6 +47,13 @@
             top: 0;
             left: 0;
             z-index: -1;
+            transition: .1s @transitionEase all;
+        }
+
+        &:not(.active):hover {
+            img {
+                transform: scale(1.02);
+            }
         }
 
         h2 {
