@@ -40,15 +40,15 @@
 
         &.active {
             margin: 0;
-            height: ~"calc(100vh - 5rem)";
+            height: ~"calc(100vh - @{headerHeight})";
             overflow: scroll;
 
             img {
                 position: fixed;
                 animation-name: makeFixed;
                 animation-duration: @transitionTime;
-                margin-top: 5rem;
-                height: ~"calc(100vh - 5rem)";
+                margin-top: @headerHeight;
+                height: ~"calc(100vh - @{headerHeight})";
 
                 @keyframes makeFixed {
                     from {
