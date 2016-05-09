@@ -1,17 +1,40 @@
 @import "../../style/vars";
 
+@collapsedHeight: 25rem;
+@padding: 2rem;
+@margin: 4rem;
+
 .vo_project_list {
     padding: 0;
     margin: 0;
 
+    &-section {
+        position: relative;
+        width: 50%;
+        flex-grow: 0;
+
+        &:after {
+            @height: 4rem;
+            content: "";
+            display: block;
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,.1));
+            top: (@collapsedHeight - @padding - @height);
+            height: @height;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            transition: @transitionTime @transitionEase all;
+        }
+    }
+
     &-item {
         list-style: none;
-        margin-bottom: 2rem;
+        margin-bottom: @margin;
         position: relative;
         text-align: center;
         overflow: hidden;
-        height: 20rem;
-        padding: 2rem;
+        height: @collapsedHeight;
+        padding: @padding;
         display: block;
         overflow: hidden;
         transition: @transitionTime @transitionEase all;
@@ -67,6 +90,13 @@
 
             .vo_project_list-link {
                 display: none;
+            }
+
+            .vo_project_list-section {
+                &:after {
+                    opacity: 0;
+                    top: 100vh;
+                }
             }
         }
     }

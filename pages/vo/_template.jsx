@@ -33,7 +33,7 @@ module.exports = React.createClass({
 
             memberList.push(
                 <section key={page.path}
-                    className="vo-section vo_about-member">
+                    className="vo-section vo-section--half vo_about-member">
                     <h1>{page.data.name}</h1>
                     <img
                         className="vo_about-image"
