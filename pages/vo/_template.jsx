@@ -33,7 +33,7 @@ module.exports = React.createClass({
 
             memberList.push(
                 <section key={page.path}
-                    className="vo_about-section vo_about-member">
+                    className="vo-section vo_about-member">
                     <h1>{page.data.name}</h1>
                     <img
                         className="vo_about-image"
@@ -46,11 +46,9 @@ module.exports = React.createClass({
             )
         })
 
-        console.log()
-
         return (
-            <div className="vo_about">
-                <section className="vo_about-section vo_about-description">
+            <div className="vo_about vo-section_wrapper">
+                <section className="vo-section vo_about-description">
                     {this.props.children}
                 </section>
                 {memberList}

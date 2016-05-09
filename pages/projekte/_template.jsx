@@ -52,16 +52,19 @@ module.exports = React.createClass({
                         mehr infos
                     </Link>
                     <img srcSet={srcSet} src={responsiveImage.src} />
-                    <div className="vo_project_list-description">
-                        <h2>{page.data.title}</h2>
-                        <div>{page.data.description}</div>
-                        <div className="vo-trenner"/>
-                        <div>{page.data.date}</div>
-                        <div>{page.data.what}</div>
-                        <div className="vo-trenner"/>
-                        <div>{page.data.what2}</div>
-                        <div className="vo_project_list-body"
-                            dangerouslySetInnerHTML={{ __html: page.data.body }}>
+                    <div className="vo-section_wrapper">
+                        <div className="vo-section vo-section--half">
+                            <h2>{page.data.title}</h2>
+                            <div>{page.data.description}</div>
+                            <div className="vo-trenner"/>
+                            <div>{page.data.date}</div>
+                            <div>{page.data.what}</div>
+                            <div className="vo-trenner"/>
+                            <div>{page.data.what2}</div>
+                            <div className="vo-trenner"/>
+                            <div className="vo_project_list-body"
+                                dangerouslySetInnerHTML={{ __html: page.data.body }}>
+                            </div>
                         </div>
                     </div>
                 </li>
