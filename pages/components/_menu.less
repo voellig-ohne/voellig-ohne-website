@@ -1,4 +1,5 @@
 @import "../../style/vars";
+@import "../../style/fonts";
 
 .vo_menu {
     padding: 0;
@@ -13,5 +14,23 @@
 
     .vo-root & {
         transform: translateY(~"calc(100vh - @{headerHeight})");
+    }
+
+    &-link {
+        &:after {
+			transform: translateY(-7px);
+			height: 2px;
+		}
+
+        &--active, &:hover {
+            &:after {
+    			transform: translateY(0);
+    			height: 1px;
+    		}
+        }
+
+        &--active {
+            // pointer-events: none;
+        }
     }
 }

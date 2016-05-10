@@ -13,12 +13,20 @@ module.exports = React.createClass({
     render () {
         const links = [
             {
+                target: '/',
+                title: 'völlig ohne'
+            },
+            {
                 target: '/projekte/',
                 title: 'projekte'
             },
             {
                 target: '/vo/',
-                title: 'wir sind'
+                title: 'uns'
+            },
+            {
+                target: '/kontakt/',
+                title: 'kontakt'
             }
         ]
 
@@ -26,7 +34,8 @@ module.exports = React.createClass({
             return (
                 <li key={link.target}>
                     <Link to={prefixLink(link.target)}
-                        activeClassName="vo-link-active">
+                        className="vo_menu-link"
+                        activeClassName="vo_menu-link--active">
                         {link.title}
                     </Link>
                 </li>
