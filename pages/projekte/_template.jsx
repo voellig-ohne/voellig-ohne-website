@@ -16,7 +16,6 @@ module.exports = React.createClass({
     },
     render () {
         const projectList = [];
-
         const currentPath = '/projekte/'
 
         const projects = this.props.route.pages.filter((page) => {
@@ -24,21 +23,14 @@ module.exports = React.createClass({
         })
 
         projects.forEach((page) => {
+            const subDir = page.path.replace(currentPath, '')
+            const responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000!./' + subDir + page.data.mainImage + '.jpg')
+            const srcSet = generateSrcSet(responsiveImage.images)
+            let classNames = 'vo_project_list-item';
+
             const backgroundImage = {
                 backgroundImage: `url(${page.path}${page.data.mainImage})`
             }
-
-            const subDir = page.path.replace(currentPath, '')
-
-            let responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000!./' + subDir + page.data.mainImage + '.jpg')
-
-            // WORST HACK DAMN IT
-            const srcSet = responsiveImage.images.map((image) => {
-                const linkPrefix = (process.env.NODE_ENV === 'production') ? '/' : '';
-                return linkPrefix + prefixLink(image.path) + ' ' + image.width + 'w'
-            }).join(', ')
-
-            let classNames = 'vo_project_list-item';
 
             if (this.props.location.pathname !== currentPath) {
                 classNames += (this.props.location.pathname === page.path) ? ' active' : ' passive';
@@ -67,6 +59,10 @@ module.exports = React.createClass({
                             </div>
                         </div>
                     </div>
+
+                    <ul className="vo_project-gallery">
+
+                    </ul>
                 </li>
             )
         })
@@ -84,3 +80,11 @@ module.exports = React.createClass({
         )
     },
 })
+
+function generateSrcSet(srcset) {
+    const linkPrefix = (process.env.NODE_ENV === 'production') ? '/' : '';
+
+    return srcset.map((image) => {
+        return linkPrefix + prefixLink(image.path) + ' ' + image.width + 'w'
+    }).join(', ')
+}
