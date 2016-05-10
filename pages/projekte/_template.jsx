@@ -73,9 +73,11 @@ module.exports = React.createClass({
                             <div>{page.data.what}</div>
                             <div className="vo-trenner"/>
                             <div>{page.data.what2}</div>
-                            <div className="vo-trenner"/>
-                            <div className="vo_project_list-body"
-                                dangerouslySetInnerHTML={{ __html: page.data.body }}>
+                            <div className="vo_project-full_text">
+                                <div className="vo-trenner"/>
+                                <div className="vo_project_list-body"
+                                    dangerouslySetInnerHTML={{ __html: page.data.body }}>
+                                </div>
                             </div>
                         </div>
                     </div>

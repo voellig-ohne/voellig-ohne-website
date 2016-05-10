@@ -3,8 +3,12 @@ title: met.cat
 what: GESTALTUNGS- & KOMMUNIKATIONSKONZEPT, WEBKONZEPT
 what2: logo, postkartenserie, gestaltung und umsetzung website, fotokonzept, geschäftsausstattung, marketingstrategie, text
 date: in der Entwicklung
-mainImage: IMG_4378
+mainImage: IMG_4374-Edit
 description: Catering-Unternehmen aus Berlin
+images:
+ - IMG_4378
+ - IMG_4374-Edit
+ - IMG_4415
 ---
 
 met.cat ist die Abkürzung für metropolitan catering und der name eines Berliner Catering Unternehmens.

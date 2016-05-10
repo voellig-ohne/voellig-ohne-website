@@ -5,6 +5,9 @@ what2: logo, wechselnde programmhefte, flyer, info-broschüren, merchandise, ge
 date: seit 2013
 description: Temporäre Hafenbar in Bremen
 mainImage: IMG_4128
+images:
+ - IMG_4144
+ - IMG_4151-Edit
 ---
 
 Das Golden City ist ein temporärer Kulturund Veranstaltungsraum in Bremen, der sich vor allem mit Sehnsucht, Erinnerung und Stadtentwicklungsfragen auseinander setzt und die dortige Kreativ-Wirtschaft kritisch beäugt. Seit 2013 belebt er jeweils 3 Monate im Jahr den Europahafen in Bremen.
