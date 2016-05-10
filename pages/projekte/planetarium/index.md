@@ -5,6 +5,11 @@ what2: logo, wechselnde programmhefte, flyer, merchandise, poster, tagungsunterl
 date: seit 2014
 mainImage: IMG_4267
 description: Planetarium in Potsdam
+images:
+ - IMG_4264-Edit
+ - IMG_4265
+ - IMG_4298-Edit
+ - IMG_4312-Edit
 ---
 
 Das Logo ist ein stilisirtes Sonnensystem, in dessen Zentrum sich der Trägerverein des Planetariums befindet.

@@ -26,6 +26,7 @@ module.exports = React.createClass({
             const subDir = page.path.replace(currentPath, '')
             const responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000!./' + subDir + page.data.mainImage + '.jpg')
             const srcSet = generateSrcSet(responsiveImage.images)
+            let gallery;
             let classNames = 'vo_project_list-item';
 
             const backgroundImage = {
@@ -36,6 +37,25 @@ module.exports = React.createClass({
                 classNames += (this.props.location.pathname === page.path) ? ' active' : ' passive';
             }
 
+            if (page.data.images) {
+                console.log(page.data.images)
+                const galleryImages = page.data.images.map((image) => {
+                    const responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000!./' + subDir + image + '.jpg')
+
+                    return (
+                        <li key={image}>
+                            <img srcSet={generateSrcSet(responsiveImage.images)} />
+                        </li>
+                    )
+                })
+
+                gallery = (
+                    <ul className="vo_project_gallery">
+                        {galleryImages}
+                    </ul>
+                )
+            }
+
             projectList.push(
                 <li className={classNames}
                     key={page.path}>
@@ -43,7 +63,7 @@ module.exports = React.createClass({
                         className="vo_project_list-link">
                         mehr infos
                     </Link>
-                    <img srcSet={srcSet} src={responsiveImage.src} />
+                    <img srcSet={srcSet} src={responsiveImage.src} className="vo_project_list-main_image"/>
                     <div className="vo-section_wrapper">
                         <div className="vo_project_list-section vo-section vo-section--half">
                             <h2>{page.data.title}</h2>
@@ -60,9 +80,7 @@ module.exports = React.createClass({
                         </div>
                     </div>
 
-                    <ul className="vo_project-gallery">
-
-                    </ul>
+                    {gallery}
                 </li>
             )
         })
