@@ -38,7 +38,6 @@ module.exports = React.createClass({
             }
 
             if (page.data.images) {
-                console.log(page.data.images)
                 const galleryImages = page.data.images.map((image) => {
                     const responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000!./' + subDir + image + '.jpg')
 
