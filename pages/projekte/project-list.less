@@ -28,19 +28,18 @@
     }
 
     &-main_image {
-        height: 100%;
+        height: @collapsedHeight;
         width: 100%;
         object-fit: cover;
         position: absolute;;
         top: 0;
         left: 0;
         z-index: -1;
-        transition: .1s @transitionEase all;
+        transition: .1s @transitionEase height;
     }
 
     &-item {
         list-style: none;
-        margin-bottom: @margin;
         position: relative;
         text-align: center;
         overflow: hidden;
@@ -49,6 +48,7 @@
         display: block;
         overflow: hidden;
         transition: @transitionTime @transitionEase all;
+        margin-bottom: @margin;
 
         &:not(.active):hover {
             .vo_project_list-main_image {
@@ -65,32 +65,49 @@
             height: 0;
             padding-top: 0;
             padding-bottom: 0;
-
         }
 
         &.active {
-            margin: 0;
-            height: ~"calc(100vh - @{headerHeight})";
-            overflow: scroll;
+            margin-top: 0;
+            margin-bottom: 0;
+            height: auto;
+            overflow: visible;
+            animation-name: open;
+            animation-duration: @transitionTime;
+            height: auto;
+            @endHeight: ~"calc(100vh - @{headerHeight})";
+
+            @keyframes open {
+                from {
+                    height: @collapsedHeight;
+                    overflow: hidden;
+                }
+
+                to {
+                    height: @endHeight;
+                    overflow: hidden;
+                }
+            }
 
             .vo_project_list-main_image {
+
                 position: fixed;
                 animation-name: makeFixed;
                 animation-duration: @transitionTime;
+                height: @endHeight;
                 margin-top: @headerHeight;
-                height: ~"calc(100vh - @{headerHeight})";
 
                 @keyframes makeFixed {
                     from {
-                        margin-top: 0;
-                        position: absolute;
                         height: 100%;
+                        position: absolute;
+                        margin-top: 0;
                     }
 
                     to {
-                        margin-top: 0;
-                        position: absolute;
                         height: 100%;
+                        position: absolute;
+                        margin-top: 0;
                     }
                 }
             }
@@ -103,9 +120,13 @@
                 &:after {
                     opacity: 0;
                     top: 100vh;
+                    display: none;
                 }
             }
         }
+    }
+
+    &:not(.active):not(.passive) {
     }
 
     &-link {
