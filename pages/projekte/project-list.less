@@ -5,6 +5,8 @@
 @margin: 4rem;
 
 .vo_project_list {
+    @endHeight: ~"calc(100vh - @{headerHeight})";
+
     padding: 0;
     margin: 0;
 
@@ -28,6 +30,7 @@
     }
 
     &-item {
+
         list-style: none;
         position: relative;
         text-align: center;
@@ -68,7 +71,6 @@
             animation-name: open;
             animation-duration: @transitionTime;
             height: auto;
-            @endHeight: ~"calc(100vh - @{headerHeight})";
 
             @keyframes open {
                 from {
@@ -108,14 +110,26 @@
             .vo_project_list-link {
                 display: none;
             }
-
-            .vo_project-full_text {
-                display: block;
-            }
         }
 
-        &:not(.active):not(.passive) {
-            .vo_project_list-main_image {
+        &.listed {
+            animation-name: close;
+            animation-duration: @transitionTime;
+
+            .vo_project-full_text {
+                display: none;
+            }
+
+            @keyframes close {
+                from {
+                    height: @endHeight;
+                    overflow: hidden;
+                }
+
+                to {
+                    height: @collapsedHeight;
+                    overflow: hidden;
+                }
             }
         }
     }
@@ -140,10 +154,6 @@
 }
 
 .vo_project {
-
-    &-full_text {
-        display: none;
-    }
 
     &_gallery {
         padding: 0;

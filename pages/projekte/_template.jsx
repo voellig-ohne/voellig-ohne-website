@@ -35,6 +35,8 @@ module.exports = React.createClass({
 
             if (this.props.location.pathname !== currentPath) {
                 classNames += (this.props.location.pathname === page.path) ? ' active' : ' passive';
+            } else {
+                classNames += ' listed'
             }
 
             if (page.data.images) {
