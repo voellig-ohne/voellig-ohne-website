@@ -1,4 +1,5 @@
-# gatsby-starter-default
-The default Gatsby starter
+# website of völlig ohne
 
-Install this starter (assuming Gatsby is installed) by running from your CLI: gatsby new gatsby-example-site
+http://völligohne.de
+
+a gatsby project.
