@@ -23,18 +23,17 @@ module.exports = React.createClass({
                     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                     <meta
                         name="viewport"
-                        content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no"
-                        />
-                    <meta name="description" content="völlig ohne. entwickelt, gestaltet, setzt um.">
-                        <title>{title}</title>
-                        <link rel="shortcut icon" href={this.props.favicon} />
-                        {cssLink}
-                    </head>
-                    <body>
-                        <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
-                        <script src={prefixLink('/bundle.js')} />
-                    </body>
-                </html>
-            )
-        },
-    })
+                        content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no" />
+                    <meta name="description" content="völlig ohne. entwickelt, gestaltet, setzt um." />
+                    <title>{title}</title>
+                    <link rel="shortcut icon" href={this.props.favicon} />
+                    {cssLink}
+                </head>
+                <body>
+                    <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
+                    <script src={prefixLink('/bundle.js')} />
+                </body>
+            </html>
+        )
+    },
+})
