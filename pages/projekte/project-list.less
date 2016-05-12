@@ -15,7 +15,7 @@
         width: 50%;
         flex-grow: 0;
         min-height: ~"calc(@{collapsedHeight} - 4rem)";
-        transition: all .1s;
+        //transition: all @transitionTime @transitionEase;
     }
 
     &-main_image {
@@ -26,11 +26,10 @@
         top: 0;
         left: 0;
         z-index: -1;
-        transition: .1s @transitionEase all;
+        transition: @transitionTime @transitionEase height;
     }
 
     &-item {
-
         list-style: none;
         position: relative;
         text-align: center;
@@ -122,11 +121,25 @@
             animation-duration: @transitionTime;
 
             .vo_project-full_text {
-                display: none;
+                visibility: hidden;
+                animation-duration: @transitionTime;
+            }
+
+            .vo_project_list-section {
+                height: ~"calc(@{collapsedHeight} - 4rem)";
+                animation-duration: @transitionTime;
             }
 
             &.animate {
                 animation-name: close;
+
+                .vo_project-full_text {
+                    animation-name: closeText;
+                }
+
+                .vo_project_list-section {
+                    animation-name: closeSection;
+                }
             }
 
             @keyframes close {
@@ -138,6 +151,28 @@
                 to {
                     height: @collapsedHeight;
                     overflow: hidden;
+                }
+            }
+
+            @keyframes closeSection {
+                from {
+                    height: auto;
+                }
+
+                to {
+                    height: auto;
+                }
+            }
+
+            @keyframes closeText {
+                from {
+                    display: block;
+                    visibility: visible;
+                }
+
+                to {
+                    display: block;
+                    visibility: visible;
                 }
             }
         }
