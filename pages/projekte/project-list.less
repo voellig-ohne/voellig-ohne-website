@@ -15,7 +15,6 @@
         width: 50%;
         flex-grow: 0;
         min-height: ~"calc(@{collapsedHeight} - 4rem)";
-        //transition: all @transitionTime @transitionEase;
     }
 
     &-main_image {
@@ -130,7 +129,7 @@
                 animation-duration: @transitionTime;
             }
 
-            &.animate {
+            &.animate.from-active {
                 animation-name: close;
 
                 .vo_project-full_text {
