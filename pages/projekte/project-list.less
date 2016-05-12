@@ -68,9 +68,16 @@
             margin-bottom: 0;
             height: auto;
             overflow: visible;
-            animation-name: open;
             animation-duration: @transitionTime;
             height: auto;
+
+            &.animate {
+                animation-name: open;
+
+                .vo_project_list-main_image {
+                    animation-name: makeFixed;
+                }
+            }
 
             @keyframes open {
                 from {
@@ -84,27 +91,26 @@
                 }
             }
 
-            .vo_project_list-main_image {
+            @keyframes makeFixed {
+                from {
+                    height: 100%;
+                    position: absolute;
+                    margin-top: 0;
+                }
 
+                to {
+                    height: 100%;
+                    position: absolute;
+                    margin-top: 0;
+                }
+            }
+
+            .vo_project_list-main_image {
                 position: fixed;
-                animation-name: makeFixed;
                 animation-duration: @transitionTime;
                 height: @endHeight;
                 margin-top: @headerHeight;
 
-                @keyframes makeFixed {
-                    from {
-                        height: 100%;
-                        position: absolute;
-                        margin-top: 0;
-                    }
-
-                    to {
-                        height: 100%;
-                        position: absolute;
-                        margin-top: 0;
-                    }
-                }
             }
 
             .vo_project_list-link {
@@ -113,11 +119,14 @@
         }
 
         &.listed {
-            animation-name: close;
             animation-duration: @transitionTime;
 
             .vo_project-full_text {
                 display: none;
+            }
+
+            &.animate {
+                animation-name: close;
             }
 
             @keyframes close {

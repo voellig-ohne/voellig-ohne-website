@@ -17,26 +17,29 @@ module.exports = React.createClass({
     render () {
         const projectList = [];
         const currentPath = '/projekte/'
+        let classNames = 'vo_project_list-item';
 
         const projects = this.props.route.pages.filter((page) => {
             return page.path.startsWith(currentPath) && page.path !== currentPath
         })
+
+        classNames += shouldAnimate(currentPath) ? ' animate' : ''
 
         projects.forEach((page) => {
             const subDir = page.path.replace(currentPath, '')
             const responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000!./' + subDir + page.data.mainImage + '.jpg')
             const srcSet = generateSrcSet(responsiveImage.images)
             let gallery;
-            let classNames = 'vo_project_list-item';
+            let classNamesItem = classNames;
 
             const backgroundImage = {
                 backgroundImage: `url(${page.path}${page.data.mainImage})`
             }
 
             if (this.props.location.pathname !== currentPath) {
-                classNames += (this.props.location.pathname === page.path) ? ' active' : ' passive';
+                classNamesItem += (this.props.location.pathname === page.path) ? ' active' : ' passive';
             } else {
-                classNames += ' listed'
+                classNamesItem += ' listed'
             }
 
             if (page.data.images) {
@@ -58,7 +61,7 @@ module.exports = React.createClass({
             }
 
             projectList.push(
-                <li className={classNames}
+                <li className={classNamesItem}
                     key={page.path}>
                     <Link to={prefixLink(page.path)}
                         className="vo_project_list-link">
@@ -108,4 +111,8 @@ function generateSrcSet(srcset) {
     return srcset.map((image) => {
         return linkPrefix + prefixLink(image.path) + ' ' + image.width + 'w'
     }).join(', ')
+}
+
+function shouldAnimate(basePath) {
+    return !!window.lastPath && window.lastPath.startsWith(basePath)
 }
