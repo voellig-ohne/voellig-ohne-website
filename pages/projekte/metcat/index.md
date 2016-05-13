@@ -8,6 +8,7 @@ description: Catering-Unternehmen aus Berlin
 images:
  - IMG_4378
  - IMG_4374-Edit
+ - IMG_4380
  - IMG_4415
 ---
 
