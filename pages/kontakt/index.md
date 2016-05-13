@@ -1,3 +1,7 @@
+---
+title: kontakt
+---
+
 Bürogemeinschaft völlig ohne  
 Luise Wilhelm & Timur Çelikel  
 Sonnenallee 200  
