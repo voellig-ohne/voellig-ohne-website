@@ -23,7 +23,7 @@ module.exports = React.createClass({
             return page.path.startsWith(currentPath) && page.path !== currentPath
         })
 
-        classNames += shouldAnimate(currentPath) ? ' animate' : ''
+        // classNames += shouldAnimate(currentPath) ? ' animate' : ''
 
         projects.forEach((page) => {
             const subDir = page.path.replace(currentPath, '')
@@ -41,12 +41,12 @@ module.exports = React.createClass({
             } else {
                 classNamesItem += ' listed'
 
-                if (window.lastPath === page.path) {
-                    classNamesItem += ' from-active'
-                }
+                // if (window.lastPath === page.path) {
+                //     classNamesItem += ' from-active'
+                // }
             }
 
-            if (page.data.images) {
+            if (page.data.images && this.props.location.pathname === page.path) {
                 const galleryImages = page.data.images.map((image) => {
                     const responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000!./' + subDir + image + '.jpg')
 
@@ -117,6 +117,6 @@ function generateSrcSet(srcset) {
     }).join(', ')
 }
 
-function shouldAnimate(basePath) {
-    return !!window.lastPath && window.lastPath.startsWith(basePath)
-}
+// function shouldAnimate(basePath) {
+//     return !!window.lastPath && window.lastPath.startsWith(basePath)
+// }
