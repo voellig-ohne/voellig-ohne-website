@@ -10,7 +10,11 @@ images:
  - IMG_4151-Edit
 ---
 
-Das Golden City ist ein temporärer Kulturund Veranstaltungsraum in Bremen, der sich vor allem mit Sehnsucht, Erinnerung und Stadtentwicklungsfragen auseinander setzt und die dortige Kreativ-Wirtschaft kritisch beäugt. Seit 2013 belebt er jeweils 3 Monate im Jahr den Europahafen in Bremen.
-Das Gestaltungskonzept spielt mit den Elementen, die das Golden City umgeben: Sehnsucht nach dem Alten und der Quietschigkeit des neuen. Das Design ins eine lebensbejahende Hommage an Schrulligkeit, Feierlaune und die industrielle Arbeiterklasse.
-Das Projekt wird unter anderem gefördert von der Stadt Bremen
+Das Golden City ist ein temporärer Kulturund Veranstaltungsraum in Bremen, der sich vor allem mit Sehnsucht, Erinnerung und Stadtentwicklungsfragen auseinandersetzt und die lokale Kreativwirtschaft kritisch beäugt. Seit 2013 belebt er 3 Monate im Jahr den Europahafen in Bremen.
+
+Das Gestaltungskonzept spielt mit den Elementen, die das Golden City ausmachen: Die Sehnsucht nach dem Alten, inszeniert in der Quietschigkeit des Neuen. Das Design ist eine lebensbejahende Hommage an Schrulligkeit, Feierlaune und die industrielle Arbeiterklasse.
+
+Es schafft Begeisterung und Identifikation – nicht nur in Bremen – und trägt damit zu zahlreichen persönlichen Empfehlungen und der ständigen Erweiterung des Publikums bei.
+Das Projekt wird unter anderem gefördert von der Stadt Bremen.
+
 www.goldencity-bremen.de
