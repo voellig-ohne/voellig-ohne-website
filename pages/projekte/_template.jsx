@@ -27,7 +27,7 @@ module.exports = React.createClass({
 
         projects.forEach((page) => {
             const subDir = page.path.replace(currentPath, '')
-            const responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000!./' + subDir + page.data.mainImage + '.jpg')
+            const responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000,quality=75!./' + subDir + page.data.mainImage + '.jpg')
             const srcSet = generateSrcSet(responsiveImage.images)
             let gallery;
             let classNamesItem = classNames;
