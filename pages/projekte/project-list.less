@@ -25,7 +25,7 @@
         top: 0;
         left: 0;
         z-index: -1;
-        transition: @transitionTime @transitionEase height;
+    //    transition: @transitionTime @transitionEase height;
     }
 
     &-item {
@@ -37,7 +37,7 @@
         padding: @padding 0 0;
         display: block;
         overflow: hidden;
-        transition: @transitionTime @transitionEase all;
+    //    transition: @transitionTime @transitionEase all;
         margin-bottom: @margin;
 
         &:not(.active):hover {
@@ -70,10 +70,10 @@
             height: auto;
 
             &.animate {
-                animation-name: open;
+            //    animation-name: open;
 
                 .vo_project_list-main_image {
-                    animation-name: makeFixed;
+                //    animation-name: makeFixed;
                 }
             }
 
@@ -130,14 +130,14 @@
             }
 
             &.animate.from-active {
-                animation-name: close;
+            //    animation-name: close;
 
                 .vo_project-full_text {
-                    animation-name: closeText;
+                //    animation-name: closeText;
                 }
 
                 .vo_project_list-section {
-                    animation-name: closeSection;
+                //    animation-name: closeSection;
                 }
             }
 
