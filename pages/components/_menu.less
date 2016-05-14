@@ -5,6 +5,7 @@
     padding: 0;
     transition: @transitionTime @transitionEase all;
     margin: 3rem 0 0;
+    text-align: center;
 
     li {
         list-style: none;
@@ -13,7 +14,11 @@
     }
 
     .vo-root & {
-        transform: translateY(~"calc(100vh - @{headerHeight})");
+        // transform: translateY(~"calc(100vh - @{headerHeight})");
+
+        position: fixed;
+        width: 100%;
+        bottom: 2rem;
     }
 
     &-link {
@@ -27,10 +32,6 @@
     			transform: translateY(0);
     			height: 1px;
     		}
-        }
-
-        &--active {
-            // pointer-events: none;
         }
     }
 }
