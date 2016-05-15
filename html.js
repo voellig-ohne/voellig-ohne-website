@@ -24,7 +24,7 @@ module.exports = React.createClass({
                     <meta
                         name="viewport"
                         content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no" />
-                    <meta name="description" content="völlig ohne. entwickelt, gestaltet, setzt um." />
+                    <meta name="description" content="völlig ohne. Entwickelt, gestaltet, setzt um. Bürogemeinschaft in Berlin." />
                     <title>{title}</title>
                     <link rel="shortcut icon" href={'/favicon.png'} />
                     {cssLink}
