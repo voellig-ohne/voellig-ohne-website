@@ -20,7 +20,7 @@ module.exports = React.createClass({
         let classNames = 'vo_project_list-item';
 
         const projects = this.props.route.pages.filter((page) => {
-            return page.path.startsWith(currentPath) && page.path !== currentPath
+            return page.path.substr(0, currentPath.length) === currentPath && page.path !== currentPath
         })
 
         // classNames += shouldAnimate(currentPath) ? ' animate' : ''

@@ -19,7 +19,7 @@ module.exports = React.createClass({
         const currentPath = '/vo/'
 
         const members = this.props.route.pages.filter((page) => {
-            return page.path.startsWith(currentPath) && page.path !== currentPath
+            return page.path.substr(0, currentPath.length) === currentPath && page.path !== currentPath
         })
 
         members.forEach((page) => {
