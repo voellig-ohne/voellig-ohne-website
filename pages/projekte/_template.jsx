@@ -93,13 +93,11 @@ module.exports = React.createClass({
 
         return (
             <DocumentTitle title={`${config.siteTitle} | projekte`}>
-                <div>
-                    <main>
-                        <ul className="vo_project_list">
-                            {projectList}
-                        </ul>
-                    </main>
-                </div>
+                <main>
+                    <ul className="vo_project_list">
+                        {projectList}
+                    </ul>
+                </main>
             </DocumentTitle>
         )
     },
