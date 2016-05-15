@@ -40,10 +40,6 @@ module.exports = React.createClass({
                 classNamesItem += (this.props.location.pathname === page.path) ? ' active' : ' passive';
             } else {
                 classNamesItem += ' listed'
-
-                // if (window.lastPath === page.path) {
-                //     classNamesItem += ' from-active'
-                // }
             }
 
             if (page.data.images && this.props.location.pathname === page.path) {

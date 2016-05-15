@@ -1,42 +1,34 @@
 @import "../../style/vars";
 
 @collapsedHeight: 25rem;
-@padding: 2rem;
-@margin: 1rem;
 
 .vo_project_list {
-    @endHeight: ~"calc(100vh - @{headerHeight})";
 
     padding: 0;
     margin: 0;
 
     &-section {
         position: relative;
-        width: 50%; 
+        width: 50%;
     }
 
     &-main_image {
         height: @collapsedHeight;
         width: 100%;
         object-fit: cover;
-        position: absolute;;
+        position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
-    //    transition: @transitionTime @transitionEase height;
     }
 
     &-item {
         list-style: none;
         position: relative;
         text-align: center;
-        overflow: hidden;
-        height: @collapsedHeight;
-        padding: @padding 0 0;
+        padding: 2rem 0 0;
         display: block;
-        overflow: hidden;
-    //    transition: @transitionTime @transitionEase all;
-        margin-bottom: @margin;
+        margin-bottom: 1rem;
 
         &:not(.active):hover {
             .vo_project_list-section {
@@ -54,60 +46,16 @@
         }
 
         &.passive {
-            margin: 0;
-            height: 0;
-            padding-top: 0;
-            padding-bottom: 0;
+            display: none;
         }
 
         &.active {
-            margin-top: 0;
-            margin-bottom: 0;
-            height: auto;
-            overflow: visible;
-            animation-duration: @transitionTime;
-            height: auto;
-
-            &.animate {
-            //    animation-name: open;
-
-                .vo_project_list-main_image {
-                //    animation-name: makeFixed;
-                }
-            }
-
-            @keyframes open {
-                from {
-                    height: @collapsedHeight;
-                    overflow: hidden;
-                }
-
-                to {
-                    height: @endHeight;
-                    overflow: hidden;
-                }
-            }
-
-            @keyframes makeFixed {
-                from {
-                    height: 100%;
-                    position: absolute;
-                    margin-top: 0;
-                }
-
-                to {
-                    height: 100%;
-                    position: absolute;
-                    margin-top: 0;
-                }
-            }
+            margin: 0;
 
             .vo_project_list-main_image {
                 position: fixed;
-                animation-duration: @transitionTime;
-                height: @endHeight;
+                height: ~"calc(100vh - @{headerHeight})";
                 margin-top: @headerHeight;
-
             }
 
             .vo_project_list-link {
@@ -116,62 +64,14 @@
         }
 
         &.listed {
-            animation-duration: @transitionTime;
+            height: @collapsedHeight;
 
             .vo_project-full_text {
-                visibility: hidden;
-                animation-duration: @transitionTime;
+                display: none;
             }
 
             .vo_project_list-section {
-                height: ~"calc(@{collapsedHeight} - 4rem)";
-                animation-duration: @transitionTime;
-            }
-
-            &.animate.from-active {
-            //    animation-name: close;
-
-                .vo_project-full_text {
-                //    animation-name: closeText;
-                }
-
-                .vo_project_list-section {
-                //    animation-name: closeSection;
-                }
-            }
-
-            @keyframes close {
-                from {
-                    height: @endHeight;
-                    overflow: hidden;
-                }
-
-                to {
-                    height: @collapsedHeight;
-                    overflow: hidden;
-                }
-            }
-
-            @keyframes closeSection {
-                from {
-                    height: auto;
-                }
-
-                to {
-                    height: auto;
-                }
-            }
-
-            @keyframes closeText {
-                from {
-                    display: block;
-                    visibility: visible;
-                }
-
-                to {
-                    display: block;
-                    visibility: visible;
-                }
+                height: (@collapsedHeight - 4rem);
             }
         }
     }
@@ -196,7 +96,6 @@
 }
 
 .vo_project {
-
     &_gallery {
         padding: 0;
 
