@@ -52,7 +52,7 @@ module.exports = React.createClass({
 
                     return (
                         <li key={image}>
-                            <img srcSet={generateSrcSet(responsiveImage.images)} />
+                            <img srcSet={generateSrcSet(responsiveImage.images)} src={generateSrc(responsiveImage)} />
                         </li>
                     )
                 })
@@ -64,6 +64,8 @@ module.exports = React.createClass({
                 )
             }
 
+            console.log(responsiveImage.images[1].path)
+
             projectList.push(
                 <li className={classNamesItem}
                     key={page.path}>
@@ -71,7 +73,7 @@ module.exports = React.createClass({
                         className="vo_project_list-link">
                         mehr infos
                     </Link>
-                    <img srcSet={srcSet} src={responsiveImage.src} className="vo_project_list-main_image"/>
+                    <img srcSet={srcSet} src={generateSrc(responsiveImage)} className="vo_project_list-main_image"/>
                     <div className="vo-section_wrapper">
                         <div className="vo_project_list-section vo-section vo-section--half">
                             <h2>{page.data.title}</h2>
@@ -115,6 +117,11 @@ function generateSrcSet(srcset) {
     return srcset.map((image) => {
         return linkPrefix + prefixLink(image.path) + ' ' + image.width + 'w'
     }).join(', ')
+}
+
+function generateSrc(responsiveImage) {
+    const linkPrefix = (process.env.NODE_ENV === 'production') ? '/' : '';
+    return linkPrefix + responsiveImage.images[1].path
 }
 
 // function shouldAnimate(basePath) {

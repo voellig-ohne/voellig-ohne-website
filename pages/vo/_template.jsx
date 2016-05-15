@@ -38,7 +38,7 @@ module.exports = React.createClass({
                     <img
                         className="vo_about-image"
                         sizes="(max-width: 500px) 100vw, 300px"
-                        srcSet={srcSet} src={responsiveImage.src} />
+                        srcSet={srcSet} src={generateSrc(responsiveImage)} />
                     <div className="vo_about-body"
                         dangerouslySetInnerHTML={{ __html: page.data.body }}>
                     </div>
@@ -56,3 +56,8 @@ module.exports = React.createClass({
         )
     },
 })
+
+function generateSrc(responsiveImage) {
+    const linkPrefix = (process.env.NODE_ENV === 'production') ? '/' : '';
+    return linkPrefix + responsiveImage.images[1].path
+}
