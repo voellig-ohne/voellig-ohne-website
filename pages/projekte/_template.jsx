@@ -64,8 +64,6 @@ module.exports = React.createClass({
                 )
             }
 
-            console.log(responsiveImage.images[1].path)
-
             projectList.push(
                 <li className={classNamesItem}
                     key={page.path}>
