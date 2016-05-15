@@ -13,11 +13,10 @@
     &-logo {
         position: absolute;
         padding: 1rem;
-        flex-grow: 1;
-        display: flex;
         transition: all @transitionTime @transitionEase;
         left: 50%;
-        margin-left: -4rem;
+        margin-left: -4.5rem;
+        width: 9rem;
         height: 2.5rem;
         overflow: hidden;
 
@@ -31,13 +30,19 @@
 
         .vo-root & {
             height: 6rem;
-            transform: translateY(~"calc(50vh - 50% - 1rem)");
+            margin-top: -4rem;
+            transform: translateY(50vh);
         }
     }
 
     &-v {
+        display: inline-block;
         transform: translateY(-6rem);
         transition: @transitionTime @transitionEase all;
+
+        svg {
+            width: 4.5rem;
+        }
 
         .vo-root & {
             transform: translateY(0);
@@ -45,8 +50,13 @@
     }
 
     &-sternchen {
+        display: inline-block;
         transform: translateY(0.3rem) translateX(-2.6rem);
         transition: @transitionTime @transitionEase all;
+
+        svg {
+            width: 2.4rem;
+        }
 
         .vo-root & {
             transform: translateY(0) translateX(0);
