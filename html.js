@@ -26,7 +26,7 @@ module.exports = React.createClass({
                         content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no" />
                     <meta name="description" content="völlig ohne. entwickelt, gestaltet, setzt um." />
                     <title>{title}</title>
-                    <link rel="shortcut icon" href={this.props.favicon} />
+                    <link rel="shortcut icon" href={'/favicon.png'} />
                     {cssLink}
                 </head>
                 <body>
