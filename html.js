@@ -11,9 +11,9 @@ module.exports = React.createClass({
     render () {
         const title = DocumentTitle.rewind()
 
-        let cssLink
+        let css
         if (process.env.NODE_ENV === 'production') {
-            cssLink = <link rel="stylesheet" href={prefixLink('/styles.css')} />
+            css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
         }
 
         return (
@@ -27,7 +27,7 @@ module.exports = React.createClass({
                     <meta name="description" content="völlig ohne. Entwickelt, gestaltet, setzt um. Bürogemeinschaft in Berlin." />
                     <title>{title}</title>
                     <link rel="shortcut icon" href={'/favicon.png'} />
-                    {cssLink}
+                    {css}
                 </head>
                 <body>
                     <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
