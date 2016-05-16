@@ -1,6 +1,37 @@
 @import "../../style/vars";
 
 .vo_next_prev {
+    min-height: @headerHeight;
     background: @backgroundColor;
     padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+    a {
+        text-transform: uppercase;
+    }
+
+    > * {
+        margin: .5rem 0;
+        flex-grow: 1;
+    }
+
+    &-prev {
+        text-align: left;
+    }
+
+    &-next {
+        text-align: right;
+    }
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+
+        > * {
+            text-align: center;
+        }
+    }
 }
