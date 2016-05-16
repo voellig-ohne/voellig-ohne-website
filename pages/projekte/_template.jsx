@@ -5,6 +5,7 @@ import sternchen from 'pages/sternchen.svg'
 import Header from 'pages/components/_header.js'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
+import NextPrev from 'pages/projekte/_next-prev.js'
 
 import './project-list.less'
 
@@ -53,10 +54,24 @@ module.exports = React.createClass({
                     )
                 })
 
+                const nextProject = projects.find((project, index, projects) => {
+                    const prevIndex = mod((index - 1), projects.length)
+                    return page.path === projects[prevIndex].path
+                })
+
+                const prevProject = projects.find((project, index, projects) => {
+                    const prevIndex = mod((index + 1), projects.length)
+                    return page.path === projects[prevIndex].path
+                })
+
                 gallery = (
-                    <ul className="vo_project_gallery">
-                        {galleryImages}
-                    </ul>
+                    <footer>
+                        <ul className="vo_project_gallery">
+                            {galleryImages}
+                        </ul>
+
+                        <NextPrev next={nextProject} prev={prevProject} />
+                    </footer>
                 )
             }
 
@@ -87,6 +102,7 @@ module.exports = React.createClass({
                     </div>
 
                     {gallery}
+
                 </li>
             )
         })
@@ -114,6 +130,10 @@ function generateSrcSet(srcset) {
 function generateSrc(responsiveImage) {
     const linkPrefix = (process.env.NODE_ENV === 'production') ? '/' : '';
     return linkPrefix + responsiveImage.images[1].path
+}
+
+function mod(n, m) {
+        return ((n % m) + m) % m;
 }
 
 // function shouldAnimate(basePath) {
