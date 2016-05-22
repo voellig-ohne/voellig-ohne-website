@@ -6,6 +6,7 @@ import Header from 'pages/components/_header.js'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 import NextPrev from 'pages/projekte/_next-prev.js'
+import Image from 'pages/components/_responsive-image-projekte.js'
 
 import './project-list.less'
 
@@ -24,12 +25,8 @@ module.exports = React.createClass({
             return page.path.substr(0, currentPath.length) === currentPath && page.path !== currentPath
         })
 
-        // classNames += shouldAnimate(currentPath) ? ' animate' : ''
-
         projects.forEach((page) => {
             const subDir = page.path.replace(currentPath, '')
-            const responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000,quality=75!./' + subDir + page.data.mainImage + '.jpg')
-            const srcSet = generateSrcSet(responsiveImage.images)
             let gallery;
             let classNamesItem = classNames;
 
@@ -45,11 +42,10 @@ module.exports = React.createClass({
 
             if (page.data.images && this.props.location.pathname === page.path) {
                 const galleryImages = page.data.images.map((image) => {
-                    const responsiveImage = require('responsive?sizes[]=500,sizes[]=1000,sizes[]=2000!./' + subDir + image + '.jpg')
 
                     return (
                         <li key={image}>
-                            <img srcSet={generateSrcSet(responsiveImage.images)} src={generateSrc(responsiveImage)} />
+                            <Image location={page.path} source={image} />
                         </li>
                     )
                 })
@@ -82,7 +78,7 @@ module.exports = React.createClass({
                         className="vo_project_list-link">
                         mehr infos
                     </Link>
-                    <img srcSet={srcSet} src={generateSrc(responsiveImage)} className="vo_project_list-main_image"/>
+                    <Image location={page.path} source={page.data.mainImage} className="vo_project_list-main_image"/>
                     <div className="vo-section_wrapper">
                         <div className="vo_project_list-section vo-section vo-section--half">
                             <h2>{page.data.title}</h2>
@@ -119,23 +115,6 @@ module.exports = React.createClass({
     },
 })
 
-function generateSrcSet(srcset) {
-    const linkPrefix = (process.env.NODE_ENV === 'production') ? '/' : '';
-
-    return srcset.map((image) => {
-        return linkPrefix + prefixLink(image.path) + ' ' + image.width + 'w'
-    }).join(', ')
-}
-
-function generateSrc(responsiveImage) {
-    const linkPrefix = (process.env.NODE_ENV === 'production') ? '/' : '';
-    return linkPrefix + responsiveImage.images[1].path
-}
-
 function mod(n, m) {
         return ((n % m) + m) % m;
 }
-
-// function shouldAnimate(basePath) {
-//     return !!window.lastPath && window.lastPath.startsWith(basePath)
-// }
