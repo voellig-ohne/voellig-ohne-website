@@ -2,6 +2,8 @@ import React from 'react'
 import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
 
+require('file?name=.htaccess!./.htaccess')
+
 module.exports = React.createClass({
     propTypes () {
         return {
