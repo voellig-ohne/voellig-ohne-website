@@ -22,8 +22,7 @@
     "object-assign": "^4.1.0",
     "react-document-title": "^2.0.1",
     "react-router": "^2.4.0",
-    "toml-js": "0.0.8",
-    "typography": "^0.7.0"
+    "toml-js": "0.0.8"
   },
   "devDependencies": {
     "babel-preset-react-hmre": "^1.1.1",
@@ -33,9 +32,6 @@
     "eslint-plugin-jsx-a11y": "^1.0.4",
     "eslint-plugin-react": "^5.0.1",
     "file-loader": "^0.8.5",
-    "jimp": "^0.2.24",
-    "react-addons-css-transition-group": "^15.0.2",
-    "responsive-loader": "^0.5.0",
     "sharp": "^0.15.0",
     "svg-inline-loader": "^0.4.1"
   },
