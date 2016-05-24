@@ -16,26 +16,20 @@ module.exports = React.createClass({
         return (
             <nav className="vo_next_prev">
                 <div className="vo_next_prev-prev">
-                    vorheriges projekt:<br />
                     <Link to={prefixLink(props.next.path)}>
-                        {props.next.data.title}
+                        vorheriges
                     </Link>
                 </div>
                 <div>
                 <div>
                     <Link to={prefixLink('/projekte/')}>
-                        projektübersicht
-                    </Link><br />
-                    gefällt?&nbsp;
-                    <Link to={prefixLink('/kontakt/')}>
-                        kontaktiere uns!
+                        übersicht
                     </Link>
                 </div>
                 </div>
                 <div className="vo_next_prev-next">
-                    nächtes projekt:<br />
                     <Link to={prefixLink(props.prev.path)}>
-                        {props.prev.data.title}
+                        nächstes
                     </Link>
                 </div>
             </nav>
