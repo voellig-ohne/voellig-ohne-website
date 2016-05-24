@@ -16,6 +16,33 @@ module.exports = React.createClass({
             children: React.PropTypes.any,
         }
     },
+
+    getInitialState: function() {
+        if (typeof window !== 'undefined') {
+            return {windowWidth: window.innerWidth};
+        } else {
+            return {windowWidth: 700};
+        }
+    },
+
+    componentDidMount: function() {
+        if (typeof window !== 'undefined') {
+            window.addEventListener('resize', this.handleResize);
+        }
+    },
+
+    componentWillUnmount: function() {
+        if (typeof window !== 'undefined') {
+            window.removeEventListener('resize', this.handleResize);
+        }
+    },
+
+    handleResize: function() {
+        if (typeof window !== 'undefined') {
+            this.setState({windowWidth: window.innerWidth});
+        }
+    },
+
     render () {
         const projectList = [];
         const currentPath = '/projekte/'
@@ -42,7 +69,6 @@ module.exports = React.createClass({
 
             if (page.data.images && this.props.location.pathname === page.path) {
                 const galleryImages = page.data.images.map((image) => {
-
                     return (
                         <li key={image}>
                             <Image location={page.path} source={image} />
@@ -71,6 +97,11 @@ module.exports = React.createClass({
                 )
             }
 
+            const crossRotation = Math.atan(350 / this.state.windowWidth) * (180 / Math.PI)
+
+            const crossTransform = {transform: 'rotate(' + crossRotation + 'deg)'}
+            const crossTransform2 = {transform: 'rotate(-' + crossRotation + 'deg)'}
+
             projectList.push(
                 <li className={classNamesItem}
                     key={page.path}>
@@ -96,6 +127,11 @@ module.exports = React.createClass({
                             </div>
                         </div>
                     </div>
+
+                    <div className="cross cross--1"
+                        style={crossTransform} />
+                    <div className="cross cross--2"
+                        style={crossTransform2}  />
 
                     {gallery}
 
