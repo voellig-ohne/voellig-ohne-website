@@ -24,14 +24,13 @@ a {
 
 	&:hover, &--active {
 		&:after {
-			transform: translateY(-7px);
-			height: 3px;
+			transform: translateY(0);
+			height: 1px;
 		}
 	}
 
 	&:after {
 		position: absolute;
-		height: 1px;
 		width: 100%;
 		content: '';
 		display: block;
@@ -39,6 +38,8 @@ a {
 		background: black;
 		transition: .15s all;
 		pointer-events: none;
+		transform: translateY(-7px);
+		height: 2px;
 	}
 }
 
