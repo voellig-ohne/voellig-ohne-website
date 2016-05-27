@@ -9,6 +9,7 @@
 
     &-main_image {
         width: 100%;
+        display: block;
     }
 
     &-gallery {
@@ -31,5 +32,15 @@
                 padding-bottom: 1rem;
             }
         }
+    }
+
+    &-link {
+        &:after {
+            display: none;
+        }
+    }
+
+    &-wrapper {
+        flex-wrap: wrap-reverse;
     }
 }

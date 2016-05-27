@@ -25,32 +25,40 @@ module.exports = React.createClass({
 
         const news = this.props.route.pages.filter((page) => {
             return page.path.substr(0, currentPath.length) === currentPath && page.path !== currentPath
+        }).sort((a, b) => {
+            return a.data.date > b.data.date
         })
 
         if (this.props.location.pathname === currentPath) {
             const newsItems = []
 
             news.forEach((page) => {
+                let mainImage
+
+                if (page.data.mainImage) {
+                    mainImage = (
+                        <Image location={page.path} source={page.data.mainImage} className="vo_news-main_image"/>
+                    )
+                }
+
                 newsItems.push(
                     <Link to={prefixLink(page.path)}
-                            key={page.path}>
-                        <section
-                            className="vo-section vo-section--half vo_news-item">
+                            key={page.path}
+                            className="vo_news-link vo-section vo-section--half vo_news-item">
+                        <section>
                             <span class="vo_news-date">
-                                {page.data.date}
+                                {formatDate(page.data.date)}
                             </span>
                             <h1>{page.data.title}</h1>
-                            <Image location={page.path} source={page.data.mainImage} className="vo_news-main_image"/>
+                            {mainImage}
                         </section>
                     </Link>
                 )
             })
 
             newsIntro = (
-                <div className="vo-section_wrapper">
-                    <section className="vo-section">
-                        {this.props.children}
-                    </section>
+                <div className="vo-section_wrapper vo_news-wrapper">
+                    {this.props.children}
                     {newsItems}
                 </div>
             )
@@ -59,18 +67,25 @@ module.exports = React.createClass({
                 return page.path === this.props.location.pathname
             })
 
-            const gallery = page.data.images.map((image) => {
-                return (
-                    <li key={image}>
-                        <Image location={page.path} source={image} />
-                    </li>
-                )
-            })
+            let gallery
+
+            if (page.data.images) {
+                gallery = page.data.images.map((image) => {
+                    return (
+                        <li key={image}>
+                            <Image location={page.path} source={image} />
+                        </li>
+                    )
+                })
+            }
 
             newsIntro = (
                 <div>
                     <div className="vo-section_wrapper">
                         <section className="vo-section">
+                            <span class="vo_news-date">
+                                {formatDate(page.data.date)}
+                            </span>
                             <h1>
                                 {page.data.title}
                             </h1>
@@ -93,3 +108,8 @@ module.exports = React.createClass({
         )
     },
 })
+
+function formatDate(date) {
+    const parsedDate = new Date(date)
+    return parsedDate.getDate() + '.' + (parsedDate.getMonth() + 1) + '.' + parsedDate.getFullYear()
+}

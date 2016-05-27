@@ -9,10 +9,7 @@ export default class Neuigkeiten extends React.Component {
         return (
             <DocumentTitle title={`${config.siteTitle} | neuigkeiten`}>
                 <div>
-                    huhu! hier gibt es neuigkeiten
-                    <Link to={prefixLink('eroeffnung/')}>
-                        yehu
-                    </Link>
+                    
                 </div>
             </DocumentTitle>
         )
