@@ -27,6 +27,10 @@ module.exports = React.createClass({
             {
                 target: '/kontakt/',
                 title: 'kontakt'
+            },
+            {
+                target: '/neuigkeiten/',
+                title: 'neuigkeiten'
             }
         ]
 
