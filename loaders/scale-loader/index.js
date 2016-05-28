@@ -8,7 +8,7 @@ module.exports = function(content) {
 
     var callback = this.async();
 
-    sharp(content).resize(parseInt(config.size, 10)).toBuffer((err, buffer) => {
+    sharp(content).resize(parseInt(config.size, 10)).progressive().toBuffer((err, buffer) => {
         callback(err, buffer);
     })
 }
