@@ -12,7 +12,7 @@ images:
  - IMG_4331
 ---
 
-93 Straßenschilder ist ein Projekt von Kollegen 2,3, welches sich mit Straßennamen und deren Umbenennungspraxis, deutsch-polnischen Klischees und der gemeinsamen Geschichte auseinander setzt.
+93 Straßenschilder ist ein Projekt von [Kollegen 2,3](http://kollegenzweikommadrei.de), welches sich mit Straßennamen und deren Umbenennungspraxis, deutsch-polnischen Klischees und der gemeinsamen Geschichte auseinander setzt.
 
 Das Hauptgestaltungselement ist die Farbe Neon-Pink. Diese sorgt mit ihrer hervorhebenden Funktion für Aufmerksamkeit im Berliner Stadtraum.
 
