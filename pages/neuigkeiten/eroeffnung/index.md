@@ -49,4 +49,4 @@ date: 2016-04-25
 
 Am 21.04. haben wir unsere Einweihung gefeiert. Zusammen mit ersten Kunden und vielen Freunden, unserer Mischgetränkedruckmaschine und sonstigen Spielereien verbrachten wir einen schönen Abend. Dank an alle, die da waren!
 
-Extra Dank an [Chickejacke](https://soundcloud.com/chickejacke) & [met.cat](http://metcat.de).
+Extra Dank an [Chickejacke](https://soundcloud.com/chickejacke) für die Musik, [met.cat](http://metcat.de) für das Essen und [Kolja](http://klange.org/) für die Fotos.
