@@ -5,6 +5,7 @@ what2: logo, postkarten, gestaltung website, visitenkarten
 description: yogaschule in berlin
 date: 2015 - jetzt
 mainImage: IMG_4239
+order: 2
 images:
  - IMG_4253
  - IMG_4213-Edit

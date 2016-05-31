@@ -5,6 +5,7 @@ what2: logo, wechselnde programmhefte, flyer, merchandise, poster, tagungsunterl
 date: seit 2014
 mainImage: IMG_4267
 description: Planetarium in Potsdam
+order: 5
 images:
  - IMG_4264-Edit
  - IMG_4265

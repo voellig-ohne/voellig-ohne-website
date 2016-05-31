@@ -5,6 +5,7 @@ what2: logo, faltblatt, gestaltung website, poster, publikation, flyer
 description: ausstellung zur polnisch deutschen beziehung
 date: 2015
 mainImage: IMG_4331
+order: 1
 images:
  - IMG_4348-Edit
  - IMG_4361

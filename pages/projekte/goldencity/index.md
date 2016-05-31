@@ -5,6 +5,7 @@ what2: logo, wechselnde programmhefte, flyer, info-broschüren, merchandise, ge
 date: seit 2013
 description: Temporäre Hafenbar in Bremen
 mainImage: IMG_4128
+order: 3
 images:
  - IMG_4144
  - IMG_4151-Edit
