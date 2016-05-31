@@ -43,6 +43,7 @@
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gatsby develop",
-    "build": "gatsby build"
+    "build": "gatsby build",
+    "deploy": "rsync -avzc --del public/ voellig@antares.uberspace.de:/home/voellig/html/"
   }
 }
