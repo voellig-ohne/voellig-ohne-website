@@ -15,8 +15,7 @@ module.exports = React.createClass({
 
         let css
         if (process.env.NODE_ENV === 'production') {
-            css = <link rel="stylesheet" href={prefixLink('/styles.css')} />
-        //    css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
+            css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
         }
 
         return (
