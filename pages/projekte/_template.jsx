@@ -79,12 +79,12 @@ module.exports = React.createClass({
                 })
 
                 const nextProject = projects.find((project, index, projects) => {
-                    const prevIndex = mod((index - 1), projects.length)
+                    const prevIndex = mod((index + 1), projects.length)
                     return page.path === projects[prevIndex].path
                 })
 
                 const prevProject = projects.find((project, index, projects) => {
-                    const prevIndex = mod((index + 1), projects.length)
+                    const prevIndex = mod((index - 1), projects.length)
                     return page.path === projects[prevIndex].path
                 })
 
