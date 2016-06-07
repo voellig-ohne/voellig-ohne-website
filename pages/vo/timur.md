@@ -10,4 +10,8 @@ softwareentwickler
 
 bachelor of science  
 (digitale medien)  
-Universität Bremen
+Universität Bremen  
+
+\*\*
+
+timurcelikel.de

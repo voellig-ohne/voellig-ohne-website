@@ -9,18 +9,23 @@ Sonnenallee 200
 
 **
 
-luisetimur (ät) volligohne<span></span>.de  
+Gemeinsame Adresse
+<a href='mailto:%22Völlig%20Ohne%22%3cluisetimur@volligohne.de%3e'>
+    luisetimur@volligohne.de
+</a>
 
 **
 
 Luise Wilhelm (Print)  
 +49 176 85229448  
-luise (ät) volligohne<span></span>.de  
-vonluise.de
+<a href='mailto:%22Luise%20Wilhelm%22%3cluise@volligohne.de%3e'>
+    luise@volligohne.de  
+</a>
 
 **
 
 Timur Çelikel (Web)  
 +49 176 55103638  
-timur (ät) volligohne<span></span>.de  
-timurcelikel.com
+<a href='mailto:%22Timur%20Celikel%22%3ctimur@volligohne.de%3e'>
+    timur@volligohne.de  
+</a>

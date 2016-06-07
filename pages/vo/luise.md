@@ -9,4 +9,8 @@ freie grafikdesignerin
 
 bachelor of design  
 (grafik design)  
-hku utrecht
+hku utrecht  
+
+\*\*
+
+vonluise.de
