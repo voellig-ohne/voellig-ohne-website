@@ -51,7 +51,7 @@ module.exports = React.createClass({
         const projects = this.props.route.pages.filter((page) => {
             return page.path.substr(0, currentPath.length) === currentPath && page.path !== currentPath
         }).sort((a, b) => {
-            return a.data.order < b.data.order
+            return (a.data.order < b.data.order) ? 1 : (a.data.order > b.data.order) ? -1 : 0
         })
 
         projects.forEach((page) => {
