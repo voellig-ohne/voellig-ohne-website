@@ -21,8 +21,8 @@ Der Mischgetränkedrucker gibt einen neunschrittigen Prozess zum Zusammenstellen
 
 Involvierte Personen:
 
-* Ein diensthabender **Barkeeper**.
-* Ein oder mehrere ein **Konsumenten**.
+* Ein\*e **diensthabende\*r Barkeeper\*in**.
+* Ein\*e oder mehrere ein **Konsument\*in(nen)**.
 
 §1 Dem Konsumenten werden nach und nach verschiedene Zutaten vorgeschlagen.
 
@@ -48,3 +48,7 @@ $6 Das Original wird dem Konsumenten überreicht, der Durchschlag verbleibt bei 
 §8 Das Mischgetränk ist vom Konsument entgegen zu nehmen und zu genießen.
 
 §9 Der Konsument hat den Platz für den nächsten Konsumenten zu räumen.
+
+---
+
+Quellcode: [Link zu GitHub](https://github.com/voellig-ohne/vo-cocktails)
