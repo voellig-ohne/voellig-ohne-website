@@ -1,6 +1,7 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
+import piwikConfig from 'piwik';
 
 require('file?name=.htaccess!./.htaccess')
 
@@ -12,6 +13,8 @@ module.exports = React.createClass({
     },
     render () {
         const title = DocumentTitle.rewind()
+
+        const piwikSetup = buildPiwikSetup(piwikConfig);
 
         let css
         if (process.env.NODE_ENV === 'production') {
@@ -34,8 +37,35 @@ module.exports = React.createClass({
                 <body>
                     <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
                     <script src={prefixLink('/bundle.js')} />
+
+                    {piwikSetup}
                 </body>
             </html>
         )
     },
 })
+
+function buildPiwikSetup({ domain, siteId, site }) {
+  const js = `
+  var _paq = _paq || [];
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+  var u="//piwik.xn--vlligohne-07a.de/";
+  _paq.push(['setTrackerUrl', u+'piwik.php']);
+  _paq.push(['setSiteId', '1']);
+  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+  g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+})();
+  `;
+
+  return <script
+    type="text/javascript"
+    dangerouslySetInnerHTML={{ __html: js }}
+  />;
+}
+
+buildPiwikSetup.propTypes = {
+  domainCDN: React.PropTypes.string,
+  domainPiwik: React.PropTypes.string,
+};
