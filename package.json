@@ -25,13 +25,18 @@
     "toml-js": "0.0.8"
   },
   "devDependencies": {
+    "app-module-path": "^2.1.0",
+    "babel-cli": "^6.18.0",
     "babel-preset-react-hmre": "^1.1.1",
     "eslint": "^2.9.0",
     "eslint-config-airbnb": "^8.0.0",
     "eslint-plugin-import": "^1.6.1",
     "eslint-plugin-jsx-a11y": "^1.0.4",
     "eslint-plugin-react": "^5.0.1",
+    "feed": "^0.3.0",
     "file-loader": "^0.8.5",
+    "front-matter": "^2.1.0",
+    "markdown-it": "^6.1.1",
     "sharp": "^0.15.0",
     "svg-inline-loader": "^0.4.1"
   },
@@ -43,7 +48,8 @@
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gatsby develop",
-    "build": "gatsby build",
-    "deploy": "rsync -avzc --del public/ voellig@antares.uberspace.de:/home/voellig/html/"
+    "build": "gatsby build && babel-node scripts/generate_rss.js",
+    "deploy": "rsync -avzc --del public/ voellig@antares.uberspace.de:/home/voellig/html/",
+    "generate-rss": "babel-node scripts/generate_rss.js"
   }
 }

@@ -33,6 +33,13 @@ module.exports = React.createClass({
                     <meta name="description" content={config.tagLine} />
                     <title>{title}</title>
                     <link rel="shortcut icon" href={'/favicon.png'} />
+                    <link
+                        key="alternate"
+                        rel="alternate"
+                        type="application/rss+xml"
+                        title={config.pageTitle}
+                        href={`${config.domain}/rss.xml`}
+                    />
                     {css}
                 </head>
                 <body>
