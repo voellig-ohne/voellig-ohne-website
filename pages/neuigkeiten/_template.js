@@ -46,7 +46,7 @@ module.exports = React.createClass({
                             key={page.path}
                             className="vo_news-link vo-section vo-section--half vo_news-item">
                         <section>
-                            <span class="vo_news-date">
+                            <span className="vo_news-date">
                                 {formatDate(page.data.date)}
                             </span>
                             <h1>{page.data.title}</h1>
