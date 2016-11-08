@@ -2,6 +2,7 @@ import React from 'react'
 import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
 import piwikConfig from 'piwik';
+import { config } from 'config';
 
 require('file?name=.htaccess!./.htaccess')
 
@@ -29,7 +30,7 @@ module.exports = React.createClass({
                     <meta
                         name="viewport"
                         content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no" />
-                    <meta name="description" content="völlig ohne. Entwickelt, gestaltet, setzt um. Bürogemeinschaft in Berlin." />
+                    <meta name="description" content={config.tagLine} />
                     <title>{title}</title>
                     <link rel="shortcut icon" href={'/favicon.png'} />
                     {css}
