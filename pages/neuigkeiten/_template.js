@@ -5,6 +5,7 @@ import sternchen from 'pages/sternchen.svg'
 import Header from 'pages/components/_header.js'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
+import { filter, sortBy, flow } from 'lodash'
 import Image from 'pages/components/_responsive-image-neuigkeiten.js'
 
 import './neuigkeiten.less'
@@ -23,11 +24,14 @@ module.exports = React.createClass({
 
         const currentPath = '/neuigkeiten/'
 
-        const news = this.props.route.pages.filter((page) => {
-            return page.path.substr(0, currentPath.length) === currentPath && page.path !== currentPath
-        }).sort((a, b) => {
-            return a.data.date > b.data.date
-        })
+        const news = flow(
+            pages => filter(pages, page => {
+                return page.path.substr(0, currentPath.length) === currentPath && page.path !== currentPath
+            }),
+            pages => sortBy(pages, page => {
+                return page.data.date
+            })
+        )(this.props.route.pages)
 
         if (this.props.location.pathname === currentPath) {
             const newsItems = []
