@@ -83,7 +83,7 @@ module.exports = React.createClass({
                 <div>
                     <div className="vo-section_wrapper">
                         <section className="vo-section">
-                            <span class="vo_news-date">
+                            <span className="vo_news-date">
                                 {formatDate(page.data.date)}
                             </span>
                             <h1>
