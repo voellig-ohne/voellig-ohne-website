@@ -1,3 +1,5 @@
+// https://github.com/scottnonnenberg/blog/blob/master/gatsby-browser.js
+
 let first = true;
 
 function getDuration() {
@@ -12,7 +14,7 @@ function getDuration() {
   return difference;
 }
 
-exports.onRouteChange = state => {
+exports.onRouteUpdate = state => {
   window._paq = window._paq || [];
 
   if (first) {
