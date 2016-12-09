@@ -121,6 +121,19 @@ module.exports = React.createClass({
                             <div>{page.data.what}</div>
                             <div className="vo-trenner"/>
                             <div>{page.data.what2}</div>
+                            {
+                                page.data.link ? 
+                                <span className="vo_project-link">
+                                    <div className="vo-trenner" />
+                                    <div>
+                                        website:&nbsp;
+                                        <a href={page.data.link.href}>
+                                            {page.data.link.title}
+                                        </a>
+                                    </div>
+                                </span> 
+                                : null
+                            }
                             <div className="vo_project-full_text">
                                 <div className="vo-trenner"/>
                                 <div className="vo_project_list-body"
