@@ -71,6 +71,18 @@ module.exports = React.createClass({
 
             if (page.data.images && this.props.location.pathname === page.path) {
                 const galleryImages = page.data.images.map((image) => {
+                    if (image.vimeo) {
+                        return (
+                            <li key={image}>
+                                <div className="embed_container">
+                                    <iframe 
+                                        src={image.vimeo} 
+                                        frameBorder='0' 
+                                        allowFullScreen />
+                                </div>
+                            </li>
+                        )
+                    }
                     return (
                         <li key={image}>
                             <Image location={page.path} source={image} />
