@@ -10,10 +10,11 @@ link:
     title: timobecker.com
     href: "https://timobecker.com"
 images:
+ - IMG_8380-Edit
+ - IMG_8384
+ - IMG_8375-Edit
  - 4792
  - 4800
- - 8154
- - 8263
  - vimeo: "https://player.vimeo.com/video/194544003?autoplay=1&loop=1&color=fff"
  - 8272
  - 8275
@@ -23,13 +24,13 @@ images:
 
 Das Logo beruht immer auf den selben sieben Punkten, wird jedoch erst durch die Interaktion von Timo Becker und seinem Gegenüber komplettiert. 
 
-1. Timo reicht seine Vistenkarte mit einem schwarzen Stift und der Bitte, die Punkte zu verbinden. 
+1. Timo reicht seine Visitenkarte mit einem schwarzen Stift und der Bitte, die Punkte zu verbinden. 
 2. Der Gegenüber verbindet die Punkte.
 3. Timo zeichnet in rot eine individuelle Illustration darauf. 
 
-Es entsteht spontan eine persöhnliche Verbindung.
+Es entsteht spontan eine persönliche Verbindung.
 
-Auf der Website wird diese Situation digital abgebildet. Da Timo nicht jederzeit mit einer Illustation antworten kann, haben wir ihn gebeten, für alle dreihundertsechzig Kombinationen Zeichnungen anzufertigen. Diese werden dann abhängig von der vom Benutzer ausgeführten Verbindung angezeigt. Dadurch, dass es sehr schwer ist, alle dreihundertsechzig Kombinationen zu erraten, entsteht trotz der wiederholbarkeit eine persöhnliche Verbindung. Es macht süchtig, sich auf die Suche nach allen Kombinationen zu begeben.
+Auf der Website wird diese Situation digital abgebildet. Da Timo nicht jederzeit mit einer Illustration antworten kann, haben wir ihn gebeten, für alle dreihundertsechzig Kombinationen Zeichnungen anzufertigen. Diese werden dann abhängig von der vom Benutzer ausgeführten Verbindung angezeigt. Dadurch, dass es sehr schwer ist, alle dreihundertsechzig Kombinationen zu erraten, entsteht trotz der Wiederholbarkeit eine persönliche Verbindung. Es macht süchtig, sich auf die Suche nach allen Kombinationen zu begeben.
 
 ![animation](/projekte/timobecker/animated.gif)
 
