@@ -29,3 +29,7 @@ Timur Çelikel (Web)
 <a href='mailto:%22Timur%20Celikel%22%3ctimur@volligohne.de%3e'>
     timur@volligohne.de  
 </a>
+
+**
+
+Datenschutzhinweis: Wir benutzen [Piwik.](https://piwik.org/) Piwik zeichnet anonymisiert Besucherinformationen dieser Website auf. Dafür werden Cookies gesetzt. Aufgezeichnet wird auf unserem Server, nicht bei Dritten. Bei modernen Browsern kann diese Funktionalität abgeschaltet werden (*do not track*). Außerdem blocken die meisten Ad-blocker und ähnliche das Tracking.
