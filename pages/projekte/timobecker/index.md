@@ -4,7 +4,7 @@ what: GESTALTUNGS- & KOMUNIKATIONSKONZEPT, UMSETZUNG
 what2: website, visitenkarte, briefpapier, installation
 date: 2016
 mainImage: 4800
-description: Illustrator aus Berlin
+description: Illustrator in Berlin
 order: 8
 link: 
     title: timobecker.com
