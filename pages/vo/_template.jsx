@@ -29,10 +29,13 @@ module.exports = React.createClass({
                     className="vo-section vo-section--half vo_about-member">
                     <h1>{page.data.name}</h1>
 
-                    <Image
-                        className="vo_about-image"
-                        sizes="(max-width: 500px) 100vw, 300px"
-                        source={page.data.image} />
+                    <div className="vo_about-image-wrapper">
+                        <Image
+                            className="vo_about-image"
+                            sizes="(max-width: 500px) 100vw, 300px"
+                            source={page.data.image}
+                            location={currentPath} />
+                    </div>
 
                     <div className="vo_about-body"
                         dangerouslySetInnerHTML={{ __html: page.data.body }}>
