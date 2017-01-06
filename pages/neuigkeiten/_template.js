@@ -54,7 +54,9 @@ module.exports = React.createClass({
                                 {formatDate(page.data.date)}
                             </span>
                             <h1>{page.data.title}</h1>
-                            {mainImage}
+                            <div className="vo_news-main_image-wrapper">
+                                {mainImage}
+                            </div>
                         </section>
                     </Link>
                 )
