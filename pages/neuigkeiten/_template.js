@@ -6,7 +6,7 @@ import Header from 'pages/components/_header.js'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 import { filter, sortBy, flow } from 'lodash'
-import Image from 'pages/components/_responsive-image-neuigkeiten.js'
+import Image from 'pages/components/_responsive-image.js'
 
 import './neuigkeiten.less'
 
@@ -41,7 +41,10 @@ module.exports = React.createClass({
 
                 if (page.data.mainImage) {
                     mainImage = (
-                        <Image location={page.path} source={page.data.mainImage} className="vo_news-main_image"/>
+                        <Image location={page.path} 
+                            sizes="(max-width: 500px) 100vw, 300px" 
+                            source={page.data.mainImage} 
+                            className="vo_news-main_image" />
                     )
                 }
 

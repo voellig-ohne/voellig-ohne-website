@@ -6,7 +6,7 @@ import Header from 'pages/components/_header.js'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 import NextPrev from 'pages/projekte/_next-prev.js'
-import Image from 'pages/components/_responsive-image-projekte.js'
+import Image from 'pages/components/_responsive-image.js'
 
 import './project-list.less'
 
