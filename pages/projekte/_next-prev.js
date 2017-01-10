@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
-import sternchen from 'pages/comp-sternchen.svg'
 
 import './_next-prev.less'
 

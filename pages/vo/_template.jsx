@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
-import sternchen from 'pages/sternchen.svg'
 import Header from 'components/Header'
 import Image from 'components/ResponsiveImage'
 

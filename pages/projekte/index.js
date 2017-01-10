@@ -3,7 +3,6 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
-import sternchen from 'pages/sternchen.svg'
 
 export default class Projects extends React.Component {
 
