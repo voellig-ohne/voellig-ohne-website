@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
-import Header from 'pages/components/_header.js'
+import Header from 'components/Header'
 
 import 'style/main.less'
 

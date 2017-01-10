@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 
-import './_menu.less'
+import './style.less'
 
 module.exports = React.createClass({
     propTypes () {

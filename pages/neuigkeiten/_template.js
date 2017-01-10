@@ -2,11 +2,11 @@ import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import sternchen from 'pages/sternchen.svg'
-import Header from 'pages/components/_header.js'
+import Header from 'components/Header'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 import { filter, sortBy, flow } from 'lodash'
-import Image from 'pages/components/_responsive-image.js'
+import Image from 'components/ResponsiveImage'
 
 import './neuigkeiten.less'
 

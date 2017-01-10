@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import sternchen from 'pages/sternchen.svg'
-import Header from 'pages/components/_header.js'
-import Image from 'pages/components/_responsive-image.js'
+import Header from 'components/Header'
+import Image from 'components/ResponsiveImage'
 
 import './vo-about.less'
 
