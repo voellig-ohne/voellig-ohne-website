@@ -5,12 +5,7 @@ import Header from 'components/Header'
 
 import 'style/main.less'
 
-module.exports = React.createClass({
-    propTypes () {
-        return {
-            children: React.PropTypes.any,
-        }
-    },
+export default class IndexTemplate extends React.Component {
     render () {
         const isRoot = this.props.location.pathname === '/'
 
@@ -22,5 +17,5 @@ module.exports = React.createClass({
                 </div>
             </div>
         )
-    },
-})
+    }
+}

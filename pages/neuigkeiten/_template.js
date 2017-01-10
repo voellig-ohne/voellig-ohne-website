@@ -9,13 +9,7 @@ import Image from 'components/ResponsiveImage'
 
 import './neuigkeiten.less'
 
-module.exports = React.createClass({
-    propTypes () {
-        return {
-            children: React.PropTypes.any,
-        }
-    },
-
+export default class NeuigkeitenTemplate extends React.Component {
     render () {
 
         let newsIntro
@@ -114,8 +108,8 @@ module.exports = React.createClass({
                 {newsIntro}
             </DocumentTitle>
         )
-    },
-})
+    }
+}
 
 function formatDate(date) {
     const parsedDate = new Date(date)

@@ -4,12 +4,7 @@ import { prefixLink } from 'gatsby-helpers'
 
 import './style.less'
 
-module.exports = React.createClass({
-    propTypes () {
-        return {
-            children: React.PropTypes.any,
-        }
-    },
+export default class Menu extends React.Component {
     render () {
         const links = [
             {
@@ -51,5 +46,5 @@ module.exports = React.createClass({
                 {renderedLinks}
             </menu>
         )
-    },
-})
+    }
+}

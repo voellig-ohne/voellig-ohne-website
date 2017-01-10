@@ -6,12 +6,7 @@ import Image from 'components/ResponsiveImage'
 
 import './vo-about.less'
 
-module.exports = React.createClass({
-    propTypes () {
-        return {
-            children: React.PropTypes.any,
-        }
-    },
+export default class voTemplate extends React.Component {
     render () {
 
         const memberList = [];
@@ -51,5 +46,5 @@ module.exports = React.createClass({
                 {memberList}
             </div>
         )
-    },
-})
+    }
+}

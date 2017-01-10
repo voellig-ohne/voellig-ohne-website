@@ -2,12 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 
-module.exports = React.createClass({
-    propTypes () {
-        return {
-            children: React.PropTypes.any,
-        }
-    },
+export default class Kontakt extends React.Component {
     render () {
         return (
             <div className="vo-section_wrapper">
@@ -16,5 +11,5 @@ module.exports = React.createClass({
                 </section>
             </div>
         )
-    },
-})
+    }
+}

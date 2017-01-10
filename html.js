@@ -6,12 +6,12 @@ import { config } from 'config';
 
 require('file?name=.htaccess!./.htaccess')
 
-module.exports = React.createClass({
+export default class Main extends React.Component {
     propTypes () {
         return {
             title: React.PropTypes.string,
         }
-    },
+    }
     render () {
         const title = DocumentTitle.rewind()
 
@@ -50,8 +50,8 @@ module.exports = React.createClass({
                 </body>
             </html>
         )
-    },
-})
+    }
+}
 
 function buildPiwikSetup({ domain, siteId, site }) {
   const js = `

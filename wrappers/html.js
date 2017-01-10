@@ -2,12 +2,7 @@ import React from 'react'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      router: React.PropTypes.object,
-    }
-  },
+export default class htmlWrapper extends React.Component {
   render () {
     const post = this.props.route.page.data
     return (
@@ -18,5 +13,5 @@ module.exports = React.createClass({
         </div>
       </DocumentTitle>
     )
-  },
-})
+  }
+}

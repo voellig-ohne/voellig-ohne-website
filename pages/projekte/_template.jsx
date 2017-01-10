@@ -9,38 +9,34 @@ import Image from 'components/ResponsiveImage'
 
 import './project-list.less'
 
-module.exports = React.createClass({
-    propTypes () {
-        return {
-            children: React.PropTypes.any,
-        }
-    },
+export default class ProjectTemplate extends React.Component {
 
-    getInitialState: function() {
+    constructor() {
+        super()
         if (typeof window !== 'undefined') {
-            return {windowWidth: window.innerWidth};
+            this.state = { windowWidth: window.innerWidth };
         } else {
-            return {windowWidth: 700};
+            this.state = { windowWidth: 700 };
         }
-    },
+    }
 
-    componentDidMount: function() {
+    componentDidMount () {
         if (typeof window !== 'undefined') {
             window.addEventListener('resize', this.handleResize);
         }
-    },
+    }
 
-    componentWillUnmount: function() {
+    componentWillUnmount () {
         if (typeof window !== 'undefined') {
             window.removeEventListener('resize', this.handleResize);
         }
-    },
+    }
 
-    handleResize: function() {
+    handleResize () {
         if (typeof window !== 'undefined') {
             this.setState({windowWidth: window.innerWidth});
         }
-    },
+    }
 
     render () {
         const projectList = [];
@@ -174,8 +170,8 @@ module.exports = React.createClass({
                 </main>
             </DocumentTitle>
         )
-    },
-})
+    }
+}
 
 function mod(n, m) {
         return ((n % m) + m) % m;

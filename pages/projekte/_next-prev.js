@@ -4,12 +4,7 @@ import { prefixLink } from 'gatsby-helpers'
 
 import './_next-prev.less'
 
-module.exports = React.createClass({
-    propTypes () {
-        return {
-            children: React.PropTypes.any,
-        }
-    },
+export default class NextPrev extends React.Component {
     render () {
         const props = this.props
         return (
@@ -34,4 +29,4 @@ module.exports = React.createClass({
             </nav>
         )
     }
-})
+}

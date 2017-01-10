@@ -5,12 +5,7 @@ import Menu from 'components/Menu'
 
 import './style.less'
 
-module.exports = React.createClass({
-    propTypes () {
-        return {
-            children: React.PropTypes.any,
-        }
-    },
+export default class Header extends React.Component {
     render () {
         const v = require('!svg-inline-loader!./v.svg')
         const sternchen = require('!svg-inline-loader!./sternchen.svg')
@@ -26,5 +21,5 @@ module.exports = React.createClass({
                 <Menu></Menu>
             </nav>
         )
-    },
-})
+    }
+}
