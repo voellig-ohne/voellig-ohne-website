@@ -1,0 +1,79 @@
+@import '../../style/vars';
+@collapsedHeight: 25rem;
+
+.container {
+    &__open:hover {
+        .main_image {
+            -webkit-filter: brightness(1.1);
+            filter: brightness(1.1);
+        }
+    }
+
+    &:hover {
+        .cross {
+            height: 0rem;
+            margin-top: 0;
+        }
+    }
+}
+
+.main_image {
+    height: @collapsedHeight;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    transition: filter .1s, -webkit-filter .1s;
+
+    &__open {
+        position: fixed;
+        height: ~"calc(100vh - @{headerHeight})";
+        margin-top: @headerHeight;
+    }
+}
+
+.section {
+    position: relative;
+    width: 50%;
+}
+
+.link {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    margin: -1rem;
+    font-size: 0;
+
+    &:after {
+        content: none;
+    }
+}
+
+.separator {
+    margin: 1rem 0 .5rem;
+
+    &:after {
+        content: '**';
+    }
+}
+
+.body {
+    text-align: left;
+}
+
+.cross {
+    background: black;
+    height: .5rem;
+    width: 200%;
+    position: absolute;
+    top: 50%;
+    margin-top: -.25rem;
+    left: -50%;
+    transition: all .1s;
+    transform: rotate(20deg);
+    z-index: 1;
+}
