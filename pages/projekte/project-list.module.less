@@ -1,0 +1,29 @@
+@import "../../style/vars";
+
+@collapsedHeight: 25rem;
+
+.list {
+    padding: 0;
+    margin: 0;
+}
+
+.gallery {
+    padding: 0;
+
+    li {
+        list-style: none;
+        padding: 1rem 1rem 0;
+        background: white;
+
+        &:last-child {
+            padding-bottom: 1rem;
+        }
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        max-height: ~"calc(100vh - 8rem)";
+        object-fit: cover;
+    }
+}

@@ -8,13 +8,12 @@ import NextPrev from 'pages/projekte/_next-prev.js'
 import Image from 'components/ResponsiveImage'
 import Project from 'components/Project'
 
-import './project-list.less'
+import style from './project-list.module.less'
 
 export default class ProjectTemplate extends React.Component {
     render () {
         const projectList = [];
         const currentPath = '/projekte/'
-        let classNames = 'vo_project_list-item';
 
         const projects = this.props.route.pages.filter((page) => {
             return page.path.substr(0, currentPath.length) === currentPath && page.path !== currentPath
@@ -25,7 +24,6 @@ export default class ProjectTemplate extends React.Component {
         projects.forEach((page) => {
             const subDir = page.path.replace(currentPath, '')
             let gallery;
-            let classNamesItem = classNames;
             const isOpen = this.props.location.pathname === page.path
             const status = {
                 isOpen,
@@ -37,12 +35,6 @@ export default class ProjectTemplate extends React.Component {
             const backgroundImage = {
                 backgroundImage: `url(${page.path}${page.data.mainImage})`
             }
-
-            // if (this.props.location.pathname !== currentPath) {
-            //     classNamesItem += isOpen ? ' active' : ' passive';
-            // } else {
-            //     classNamesItem += ' listed'
-            // }
 
             if (page.data.images && this.props.location.pathname === page.path) {
                 const galleryImages = page.data.images.map((image) => {
@@ -77,7 +69,7 @@ export default class ProjectTemplate extends React.Component {
 
                 gallery = (
                     <footer>
-                        <ul className="vo_project_gallery">
+                        <ul className={style.gallery}>
                             {galleryImages}
                         </ul>
 
@@ -89,7 +81,6 @@ export default class ProjectTemplate extends React.Component {
             projectList.push(
                 <Project 
                         page={page}
-                        className={classNamesItem}
                         status={status}
                         key={page.path}>
 
@@ -102,7 +93,7 @@ export default class ProjectTemplate extends React.Component {
         return (
             <DocumentTitle title={`${config.siteTitle} | projekte`}>
                 <main>
-                    <ul className="vo_project_list">
+                    <ul className={style.list}>
                         {projectList}
                     </ul>
                 </main>
