@@ -1,6 +1,6 @@
 ---
 title: Urania Planetarium Potsdam
-what: GESTALTUNGS- & KOMUNIKATIONSKONZEPT
+what: GESTALTUNGS- & KOMMUNIKATIONSKONZEPT
 what2: logo, wechselnde programmhefte, flyer, merchandise, poster, tagungsunterlagen (GDP), lehrmaterialien (wilhelm-foerster sternwarte berlin e.v.)
 date: seit 2014
 mainImage: IMG_4267

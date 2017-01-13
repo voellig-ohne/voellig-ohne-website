@@ -1,6 +1,6 @@
 ---
 title: Golden City Bremen
-what: GESTALTUNGS- & KOMUNIKATIONSKONZEPT
+what: GESTALTUNGS- & KOMMUNIKATIONSKONZEPT
 what2: logo, wechselnde programmhefte, flyer, info-broschüren, merchandise, gestaltung website, poster
 date: seit 2013
 description: Temporäre Hafenbar in Bremen

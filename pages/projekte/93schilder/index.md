@@ -1,6 +1,6 @@
 ---
 title: 93 Straßenschilder
-what: GESTALTUNGS- & KOMUNIKATIONSKONZEPT
+what: GESTALTUNGS- & KOMMUNIKATIONSKONZEPT
 what2: logo, faltblatt, gestaltung website, poster, publikation, flyer
 description: ausstellung zur polnisch deutschen beziehung
 date: 2015

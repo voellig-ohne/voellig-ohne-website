@@ -1,6 +1,6 @@
 ---
 title: Timo Becker
-what: GESTALTUNGS- & KOMUNIKATIONSKONZEPT, UMSETZUNG
+what: GESTALTUNGS- & KOMMUNIKATIONSKONZEPT, UMSETZUNG
 what2: website, visitenkarte, briefpapier, installation
 date: 2016
 mainImage: 4800

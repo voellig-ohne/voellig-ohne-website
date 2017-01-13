@@ -1,6 +1,6 @@
 ---
 title: Juvi Yoga
-what: GESTALTUNGS- & KOMUNIKATIONSKONZEPT
+what: GESTALTUNGS- & KOMMUNIKATIONSKONZEPT
 what2: logo, postkarten, gestaltung website, visitenkarten
 description: yogaschule in berlin
 date: 2015 - jetzt

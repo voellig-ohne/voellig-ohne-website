@@ -1,6 +1,6 @@
 ---
 title: fuchs+wald
-what: GESTALTUNGS- & KOMUNIKATIONSKONZEPT
+what: GESTALTUNGS- & KOMMUNIKATIONSKONZEPT
 what2: logo, website, illustrationen, visitenkarte, briefpapier, stempel, t-shirt
 date: 2016
 description: E-Mail Marketing
