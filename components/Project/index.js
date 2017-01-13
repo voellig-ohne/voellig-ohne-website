@@ -45,8 +45,7 @@ export default class Project extends React.Component {
         const containerClasses = classNames(className, 
             style.container, 
             {[style.container__open]: status.isOpen}, 
-            {[style.container__listed]: status.isListed}, 
-            {[style.container__passive]: status.isPassive} 
+            {[style.container__listed]: status.isListed}
         );
 
         return (

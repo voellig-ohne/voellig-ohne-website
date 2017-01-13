@@ -32,6 +32,10 @@ export default class ProjectTemplate extends React.Component {
                 isListed: this.props.location.pathname === currentPath,
             }
 
+            if (status.isPassive) {
+                return;
+            }
+
             const backgroundImage = {
                 backgroundImage: `url(${page.path}${page.data.mainImage})`
             }
