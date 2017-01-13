@@ -12,10 +12,10 @@ export default class ResponsiveImage extends React.Component {
         } else {
             const path = location.substr(1)
 
-            const size1 = '/' + require('!file!scale?size=400!../.././pages/' + path + source + '.jpg')
-            const size2 = '/' + require('!file!scale?size=1000!../.././pages/' + path + source + '.jpg')
-            const size4 = '/' + require('!file!scale?size=1800!../.././pages/' + path + source + '.jpg')
-            const size6 = '/' + require('!file!scale?size=2500!../.././pages/' + path + source + '.jpg')
+            const size1 = require('!file!scale?size=400!../.././pages/' + path + source + '.jpg')
+            const size2 = require('!file!scale?size=1000!../.././pages/' + path + source + '.jpg')
+            const size4 = require('!file!scale?size=1800!../.././pages/' + path + source + '.jpg')
+            const size6 = require('!file!scale?size=2500!../.././pages/' + path + source + '.jpg')
 
             const srcSet = size1 + ' 400w, ' + size2 + ' 1000w, ' + size4 + ' 1800w, ' + size6 + ' 2500w'
 
