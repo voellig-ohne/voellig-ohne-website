@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Menu from 'components/Menu'
 
-import './style.less'
+import style from './style.module.less'
 
 export default class Header extends React.Component {
     render () {
@@ -11,14 +11,12 @@ export default class Header extends React.Component {
         const sternchen = require('!svg-inline-loader!./sternchen.svg')
 
         return (
-            <nav className="vo_header">
-                <Link to={prefixLink('/')} className="vo_header-logo">
-                    <span className="vo_header-v" dangerouslySetInnerHTML={{ __html: v }}>
-                    </span>
-                    <span className="vo_header-sternchen" dangerouslySetInnerHTML={{ __html: sternchen }}>
-                    </span>
+            <nav className={style.header}>
+                <Link to={prefixLink('/')} className={style.logo}>
+                    <span className={style.v} dangerouslySetInnerHTML={{ __html: v }} />
+                    <span className={style.sternchen} dangerouslySetInnerHTML={{ __html: sternchen }} />
                 </Link>
-                <Menu></Menu>
+                <Menu />
             </nav>
         )
     }
