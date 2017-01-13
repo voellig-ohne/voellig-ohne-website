@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 
-import './style.less'
+import style from './style.module.less'
 
 export default class Menu extends React.Component {
     render () {
@@ -33,8 +33,8 @@ export default class Menu extends React.Component {
             return (
                 <li key={link.target}>
                     <Link to={prefixLink(link.target)}
-                        className="vo_menu-link"
-                        activeClassName="vo_menu-link--active">
+                        className={style.menu-link}
+                        activeClassName={style['link--active']}>
                         {link.title}
                     </Link>
                 </li>
@@ -42,7 +42,7 @@ export default class Menu extends React.Component {
         });
 
         return (
-            <menu className="vo_menu">
+            <menu className={style.menu}>
                 {renderedLinks}
             </menu>
         )

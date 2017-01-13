@@ -1,0 +1,35 @@
+@import "../../style/vars";
+@import "../../style/fonts";
+
+.menu {
+    padding: 0;
+    margin: 3rem 0 0;
+    text-align: center;
+
+    li {
+        list-style: none;
+        display: inline;
+        margin: 0 .5em;
+    }
+
+    :global(.vo-root) & {
+        position: fixed;
+        width: 100%;
+        bottom: 2rem;
+        left: 0;
+    }
+}
+
+.link {
+    &:after {
+        transform: translateY(-7px);
+        height: 2px;
+    }
+
+    &--active, &:hover {
+        &:after {
+            transform: translateY(0);
+            height: 1px;
+        }
+    }
+}
