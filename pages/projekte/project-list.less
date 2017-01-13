@@ -3,43 +3,8 @@
 @collapsedHeight: 25rem;
 
 .vo_project_list {
-
     padding: 0;
     margin: 0;
-
-    &-item {
-        list-style: none;
-        position: relative;
-        text-align: center;
-        padding: 2rem 0 0;
-        display: block;
-        margin-bottom: 1rem;
-
-        h2 {
-            margin: 0;
-        }
-
-        img {
-            width: 100%;
-        }
-
-        &.passive {
-            display: none;
-        }
-
-        &.active {
-            margin: 0;
-        }
-
-        &.listed {
-            height: @collapsedHeight;
-            overflow: hidden;
-
-            .vo_project_list-section {
-                height: (@collapsedHeight - 4rem);
-            }
-        }
-    }
 }
 
 .vo_project {

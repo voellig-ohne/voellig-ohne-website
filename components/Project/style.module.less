@@ -2,6 +2,35 @@
 @collapsedHeight: 25rem;
 
 .container {
+
+    list-style: none;
+    position: relative;
+    text-align: center;
+    padding: 2rem 0 0;
+    display: block;
+    margin-bottom: 1rem;
+
+    h2 {
+        margin: 0;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    &__passive {
+        display: none;
+    }
+
+    &__open {
+        margin: 0;
+    }
+
+    &__listed {
+        height: @collapsedHeight;
+        overflow: hidden;
+    }
+
     &__open:hover {
         .main_image {
             -webkit-filter: brightness(1.1);
@@ -47,7 +76,7 @@
     z-index: 1;
     font-size: 0;
     top: 0;
-    
+
     &:after {
         content: none;
     }

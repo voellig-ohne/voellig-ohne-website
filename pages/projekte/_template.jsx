@@ -26,17 +26,23 @@ export default class ProjectTemplate extends React.Component {
             const subDir = page.path.replace(currentPath, '')
             let gallery;
             let classNamesItem = classNames;
-            const isOpen = this.props.location.pathname === page.path;
+            const isOpen = this.props.location.pathname === page.path
+            const status = {
+                isOpen,
+                isActive: isOpen && this.props.location.pathname !== currentPath,
+                isPassive: !isOpen && this.props.location.pathname !== currentPath,
+                isListed: this.props.location.pathname === currentPath,
+            }
 
             const backgroundImage = {
                 backgroundImage: `url(${page.path}${page.data.mainImage})`
             }
 
-            if (this.props.location.pathname !== currentPath) {
-                classNamesItem += isOpen ? ' active' : ' passive';
-            } else {
-                classNamesItem += ' listed'
-            }
+            // if (this.props.location.pathname !== currentPath) {
+            //     classNamesItem += isOpen ? ' active' : ' passive';
+            // } else {
+            //     classNamesItem += ' listed'
+            // }
 
             if (page.data.images && this.props.location.pathname === page.path) {
                 const galleryImages = page.data.images.map((image) => {
@@ -84,7 +90,7 @@ export default class ProjectTemplate extends React.Component {
                 <Project 
                         page={page}
                         className={classNamesItem}
-                        open={isOpen}
+                        status={status}
                         key={page.path}>
 
                     { gallery }

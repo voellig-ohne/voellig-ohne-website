@@ -35,25 +35,33 @@ export default class Project extends React.Component {
     }
 
     render () {
-        const { page, className, open } = this.props
+        const { page, className, status } = this.props
 
         const crossRotation = Math.atan(350 / this.state.windowWidth) * (180 / Math.PI)
 
         const crossTransform = {transform: 'rotate(' + crossRotation + 'deg)'}
         const crossTransform2 = {transform: 'rotate(-' + crossRotation + 'deg)'}
 
-        const containerClasses = classNames(className, style.container, {[style.container__open]: !open} );
+        const containerClasses = classNames(className, 
+            style.container, 
+            {[style.container__open]: status.isOpen}, 
+            {[style.container__listed]: status.isListed}, 
+            {[style.container__passive]: status.isPassive} 
+        );
 
         return (
             <li className={containerClasses}>
-                { open ? null :
+                { status.isOpen ? null :
                     <Link to={prefixLink(page.path)}
                         className={style.link}>
                         mehr infos
                     </Link> 
                 }
                 
-                <Image location={page.path} source={page.data.mainImage} className={classNames(style.main_image, {[style.main_image__open   ]: open} )} />
+                <Image location={page.path} 
+                    source={page.data.mainImage} 
+                    className={classNames(style.main_image, {[style.main_image__open   ]: status.isOpen} )} />
+
                 <div className="vo-section_wrapper">
                     <div className={classNames(style.section, 'vo-section vo-section--half')}>
                         <h2>{page.data.title}</h2>
@@ -64,7 +72,7 @@ export default class Project extends React.Component {
                         <div className={style.separator}/>
                         <div>{page.data.what2}</div>
                         {
-                            page.data.link && open ? 
+                            page.data.link && status.isOpen ? 
                             <span>
                                 <div className={style.separator} />
                                 <div>
@@ -76,7 +84,7 @@ export default class Project extends React.Component {
                             </span> 
                             : null
                         }
-                        { open ? 
+                        { status.isOpen ? 
                             <div>
                                 <div className={style.separator}/>
                                 <div className={style.body}
@@ -88,7 +96,7 @@ export default class Project extends React.Component {
                     </div>
                 </div>
 
-                { open ? null :
+                { status.isOpen ? null :
                     <span>
                         <div className={style.cross}
                             style={crossTransform} />
