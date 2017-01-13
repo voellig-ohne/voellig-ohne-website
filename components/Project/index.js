@@ -18,13 +18,13 @@ export default class Project extends React.Component {
 
     componentDidMount () {
         if (typeof window !== 'undefined') {
-            window.addEventListener('resize', this.handleResize);
+            window.addEventListener('resize', () => this.handleResize());
         }
     }
 
     componentWillUnmount () {
         if (typeof window !== 'undefined') {
-            window.removeEventListener('resize', this.handleResize);
+            window.removeEventListener('resize', () => this.handleResize());
         }
     }
 
