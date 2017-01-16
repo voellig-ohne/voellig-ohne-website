@@ -35,7 +35,12 @@ export default class Project extends React.Component {
     }
 
     render () {
-        const { page, className, status } = this.props
+        const { page, className } = this.props
+
+        const status = this.props.status || {
+            isOpen: false,
+            isListed: true,
+        }
 
         const crossRotation = Math.atan(350 / this.state.windowWidth) * (180 / Math.PI)
 
