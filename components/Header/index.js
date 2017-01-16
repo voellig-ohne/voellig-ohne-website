@@ -9,9 +9,17 @@ export default class Header extends React.Component {
     constructor() {
         super();
         if (typeof window !== 'undefined') {
-            this.state = { scrollPosition: window.pageYOffset };
+            this.stickyBrowser = !!featureTest('position', 'sticky');
+
+            this.state = { 
+                scrollPosition: window.pageYOffset
+            };
         } else {
-            this.state = { scrollPosition: 0 };
+            this.stickyBrowser = false;
+
+            this.state = { 
+                scrollPosition: 0
+            }
         }
     }
 
@@ -34,6 +42,8 @@ export default class Header extends React.Component {
     }
     
     render () {
+        const { isRoot } = this.props
+
         const v = require('!svg-inline-loader!./v.svg')
         const sternchen = require('!svg-inline-loader!./sternchen.svg')
 
@@ -49,4 +59,19 @@ export default class Header extends React.Component {
             </nav>
         )
     }
+}
+
+// thanks http://albertogasparin.it/articles/2014/04/detect-css-support-of-property-value/
+function featureTest( property, value, noPrefixes ) {
+  // Thanks Modernizr!
+  var prop = property + ':',
+      el = document.createElement( 'test' ),
+      mStyle = el.style;
+  
+  if( !noPrefixes ) {
+      mStyle.cssText = prop + [ '-webkit-', '-moz-', '-ms-', '-o-', '' ].join( value + ';' + prop ) + value + ';';
+  } else {
+      mStyle.cssText = prop + value;
+  }    
+  return mStyle[ property ];
 }
