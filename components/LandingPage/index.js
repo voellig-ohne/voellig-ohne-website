@@ -10,8 +10,6 @@ export default class LandingPage extends React.Component {
     render () {
         const { projects } = this.props;
 
-        console.log(style)
-
         return (
             <div>
                 <div className={classNames(style.container, 'vo-section_wrapper')}>
@@ -26,17 +24,19 @@ export default class LandingPage extends React.Component {
                         Wie alles Gewachsene ist es natürlich schön, jede Zelle sinnvoller 
                         Teil eines Ganzen.
                     </div>
+
+                    <ul className={style.project_list}>
+                        { map(projects, (project) => {
+                            return (
+                                <Project key={project.path} 
+                                    className={style.project}
+                                    page={project} />                
+                            )
+                        })}
+                    </ul>
                 </div>
 
-                <ul className={style.project_list}>
-                    { map(projects, (project) => {
-                        return (
-                            <Project key={project.path} 
-                                className={style.project}
-                                page={project} />                
-                        )
-                    })}
-                </ul>
+
             </div>
         )
     }
