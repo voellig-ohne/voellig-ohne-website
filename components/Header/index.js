@@ -8,6 +8,8 @@ import style from './style.module.less'
 export default class Header extends React.Component {
     constructor() {
         super();
+        this.onScroll = this.handleScroll.bind(this)
+
         if (typeof window !== 'undefined') {
             this.stickyBrowser = !!featureTest('position', 'sticky');
 
@@ -25,13 +27,13 @@ export default class Header extends React.Component {
 
     componentDidMount () {
         if (typeof window !== 'undefined') {
-            window.addEventListener('scroll', () => this.handleScroll());
+            window.addEventListener('scroll', this.onScroll);
         }
     }
 
     componentWillUnmount () {
         if (typeof window !== 'undefined') {
-            window.removeEventListener('scroll', () => this.handleScroll());
+            window.removeEventListener('scroll', this.onScroll);
         }
     }
 
