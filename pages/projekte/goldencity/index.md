@@ -6,6 +6,7 @@ date: seit 2013
 description: Temporäre Hafenbar in Bremen
 mainImage: IMG_4128
 order: 3
+featured: true
 images:
  - IMG_4144
  - IMG_4151-Edit
