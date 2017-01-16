@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
+import classNames from 'classnames'
 
 import style from './style.module.less'
 
 export default class Menu extends React.Component {
     render () {
+        const { className } = this.props
+
         const links = [
             {
                 target: '/',
@@ -42,7 +45,7 @@ export default class Menu extends React.Component {
         });
 
         return (
-            <menu className={style.menu}>
+            <menu className={classNames(className, style.menu)}>
                 {renderedLinks}
             </menu>
         )
