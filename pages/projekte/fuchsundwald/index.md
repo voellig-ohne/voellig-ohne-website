@@ -7,7 +7,7 @@ description: E-Mail Marketing
 mainImage: IMG_5523
 order: 7
 link: 
-    title: fuchsundwald.com
+    title: fuchsundwald.de
     href: "https://fuchsundwald.de"
 images:
 - IMG_5531
