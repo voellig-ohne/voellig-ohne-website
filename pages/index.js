@@ -4,14 +4,20 @@ import { prefixLink } from 'gatsby-helpers'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 import LandingPage from 'components/LandingPage'
-import { startsWith, filter } from 'lodash'
+import { startsWith, filter, flow, sortBy, reverse } from 'lodash'
 
 export default class Index extends React.Component {
     render () {
 
-        const projects = filter (this.props.route.pages, (project) => {
-            return startsWith(project.path, '/projekte') && project.data.featured
-        })
+        const projects = flow(
+            pages => filter(pages, (page) => {
+                return startsWith(page.path, '/projekte') && page.data.featured
+            }),
+            projects => sortBy(projects, (project) => {
+                return project.data.order
+            }), 
+            projects => reverse(projects)
+        )(this.props.route.pages)
 
         return (
             <DocumentTitle title={config.siteTitle}>

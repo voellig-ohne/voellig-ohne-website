@@ -1,5 +1,5 @@
 @import "../../style/vars";
-@height: 4rem;
+@height: 6rem;
 
 .header {
     display: inline;
@@ -7,34 +7,39 @@
 
 .menu {
     padding: 0;
-    margin: 3rem 0 0;
+    margin: 0;
     text-align: center;
+    width: 100%;
+    background: @backgroundColor;
+    position: fixed;
+    height: @height;
+    z-index: 10;
+    top: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 2rem;
 
     :global(.vo-root) & {
         position: -webkit-sticky;
         position: sticky;
-        z-index: 10;
-        width: 100%;
-        margin-top: ~"calc(100vh - @{height})";
-        height: @height;
-        top: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: @backgroundColor;
     }
 }
 
+.logo_container {
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    height: ~"calc(100vh - @{height})";
+}
+
 .logo {
-    position: absolute;
     top: 0;
     padding: 1rem;
     transition: all @transitionTime @transitionEase;
     left: 50%;
     margin-left: -4.5rem;
     width: 9rem;
-    height: 2.5rem;
-    overflow: hidden;
 
     &:after {
         content: none;
@@ -43,38 +48,20 @@
     svg {
         height: 4rem;
     }
-
-    :global(.vo-root) & {
-        height: 6rem;
-        margin-top: -4rem;
-        transform: translateY(50vh);
-    }
 }
 
 .v {
     display: inline-block;
-    transform: translateY(-6rem);
-    transition: @transitionTime @transitionEase all;
 
     svg {
         width: 4.5rem;
-    }
-
-    :global(.vo-root) & {
-        transform: translateY(0);
     }
 }
 
 .sternchen {
     display: inline-block;
-    transform: translateY(0.3rem) translateX(-2.6rem);
-    transition: @transitionTime @transitionEase all;
 
     svg {
         width: 2.4rem;
-    }
-
-    :global(.vo-root) & {
-        transform: translateY(0) translateX(0);
     }
 }

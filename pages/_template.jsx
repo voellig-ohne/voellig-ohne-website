@@ -11,7 +11,7 @@ export default class IndexTemplate extends React.Component {
 
         return (
             <div className={isRoot ? 'vo-root': ''}>
-                <Header></Header>
+                <Header isRoot={isRoot}></Header>
                 <div className="vo-wrapper">
                     {this.props.children}
                 </div>

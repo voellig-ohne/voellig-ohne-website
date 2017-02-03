@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Menu from 'components/Menu'
+import classNames from 'classnames'
 
 import style from './style.module.less'
 
@@ -40,6 +41,7 @@ export default class Header extends React.Component {
     handleScroll () {
         if (typeof window !== 'undefined') {
             this.setState({scrollPosition: window.pageYOffset});
+            console.log(this.sternchen.getBoundingClientRect().top)
         }
     }
     
@@ -54,7 +56,9 @@ export default class Header extends React.Component {
                 <div className={style.logo_container}>
                     <Link to={prefixLink('/')} className={style.logo}>
                         <span className={style.v} dangerouslySetInnerHTML={{ __html: v }} />
-                        <span className={style.sternchen} dangerouslySetInnerHTML={{ __html: sternchen }} />
+                        <span className={style.sternchen} 
+                            dangerouslySetInnerHTML={{ __html: sternchen }}
+                            ref={(c) => this.sternchen = c} />
                     </Link>
                 </div>
                 <Menu className={style.menu} />
