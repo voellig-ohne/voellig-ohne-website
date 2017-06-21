@@ -51,6 +51,7 @@
     "build": "gatsby build && babel-node scripts/generate_rss.js",
     "testBuild": "gatsby serve-build",
     "deploy": "rsync -avzc --del public/ voellig@antares.uberspace.de:/home/voellig/html/",
+    "deploy-test": "rsync -avzc --del public/ voellig@antares.uberspace.de:/var/www/virtual/voellig/test.volligohne.de/",
     "generate-rss": "babel-node scripts/generate_rss.js"
   }
 }
