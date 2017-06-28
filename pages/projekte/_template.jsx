@@ -41,10 +41,10 @@ export default class ProjectTemplate extends React.Component {
             }
 
             if (page.data.images && this.props.location.pathname === page.path) {
-                const galleryImages = page.data.images.map((image) => {
+                const galleryImages = page.data.images.map((image, idx) => {
                     if (image.vimeo) {
                         return (
-                            <li key={image}>
+                            <li key={idx}>
                                 <div className="embed_container">
                                     <iframe 
                                         src={image.vimeo} 
