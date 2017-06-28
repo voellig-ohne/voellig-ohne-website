@@ -22,6 +22,8 @@ images:
 
 ---
 
+Featured in: [fastcodesign](https://www.fastcodesign.com/90125529/7-design-portfolios-that-double-as-awesome-uis), [hoverstat.es](http://hoverstat.es/features/connect-the-dots-on-timo-becker-s-portfolio), [Design made in Germany](https://www.designmadeingermany.de/2017/122935/), 
+
 Das Logo beruht immer auf den selben sieben Punkten, wird jedoch erst durch die Interaktion von Timo Becker und seinem Gegenüber komplettiert. 
 
 1. Timo reicht seine Visitenkarte mit einem schwarzen Stift und der Bitte, die Punkte zu verbinden. 

@@ -19,6 +19,10 @@ images:
 - 11-03-22-25-DSC06097
 ---
 
+<a target="_blank" class="blank-link" href="https://twitter.com/volligohne/status/862955898913918977">
+<img title="CO&CO SELECTED" src="co-und-co-selected-cyan2017.svg" style="width: 7rem"/>
+</a>
+
 Christian Fuchs kam zu uns mit dem Auftrag für eine komplette Coorporate Identity. Für seine Neugründung war auch der Name noch nicht gesetzt.
 
 # Die Idee
