@@ -41,6 +41,12 @@ a {
 		transform: translateY(-7px);
 		height: 2px;
 	}
+
+	&:global(.blank-link) {
+		&:after {
+			display: none;
+		}
+	}
 }
 
 p {
