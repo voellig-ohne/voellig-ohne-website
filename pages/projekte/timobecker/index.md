@@ -22,7 +22,11 @@ images:
 
 ---
 
-Featured in: [fastcodesign](https://www.fastcodesign.com/90125529/7-design-portfolios-that-double-as-awesome-uis), [hoverstat.es](http://hoverstat.es/features/connect-the-dots-on-timo-becker-s-portfolio), [Design made in Germany](https://www.designmadeingermany.de/2017/122935/), 
+Featured in: [fastcodesign](https://www.fastcodesign.com/90125529/7-design-portfolios-that-double-as-awesome-uis), [hoverstat.es](http://hoverstat.es/features/connect-the-dots-on-timo-becker-s-portfolio), [Design made in Germany](https://www.designmadeingermany.de/2017/122935/)
+
+<a target="_blank" class="blank-link" href="https://twitter.com/volligohne/status/880775593515732992">
+<img title="CO&CO SELECTED" src="co-und-co-selected-magenta2017.svg" style="width: 7rem"/>
+</a>
 
 Das Logo beruht immer auf den selben sieben Punkten, wird jedoch erst durch die Interaktion von Timo Becker und seinem Gegenüber komplettiert. 
 
