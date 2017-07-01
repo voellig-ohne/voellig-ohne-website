@@ -23,7 +23,7 @@ images:
 <img title="CO&CO SELECTED" src="co-und-co-selected-cyan2017.svg" style="width: 7rem"/>
 </a>
 
-Christian Fuchs kam zu uns mit dem Auftrag für eine komplette Coorporate Identity. Für seine Neugründung war auch der Name noch nicht gesetzt.
+Christian Fuchs kam zu uns mit dem Auftrag für eine komplette Corporate Identity. Für seine Neugründung war auch der Name noch nicht gesetzt.
 
 # Die Idee
 Der *fuchs* tritt zusammen mit dem *wald* auf, welcher Platzhalter ist für einen potenziellen Partner, Kunden oder die Wildniss des Marketingdschungels. Das Logo ist typografisch umgesetzt mit dem Circumflex. Zwei davon in *rot* werden als Fuchsohren interpretiert. Mehrere in einer Gruppe in oder auf *grün* bilden einen *wald*.
