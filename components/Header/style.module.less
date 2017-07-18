@@ -16,10 +16,10 @@
     padding: 1rem;
     transition: all @transitionTime @transitionEase;
     left: 50%;
-    margin-left: -4.5rem;
-    width: 9rem;
+    margin-left: -8rem;
+    width: 16rem;
     height: 2.5rem;
-    overflow: hidden;
+    text-align: center;
 
     &:after {
         content: none;
@@ -30,10 +30,20 @@
     }
 
     :global(.vo-root) & {
-        height: 6rem;
+        height: 8rem;
         margin-top: -4rem;
         transform: translateY(50vh);
+
+        .claim {
+            opacity: 1;
+        }
     }
+}
+
+.claim {
+    opacity: 0;
+    margin-top: 1rem;
+    transition: all @transitionTime @transitionEase;
 }
 
 .v {

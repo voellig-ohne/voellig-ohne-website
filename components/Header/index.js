@@ -18,6 +18,7 @@ export default class Header extends React.Component {
                 <Link to={link} className={style.logo}>
                     <span className={style.v} dangerouslySetInnerHTML={{ __html: v }} />
                     <span className={style.sternchen} dangerouslySetInnerHTML={{ __html: sternchen }} />
+                    <div className={style.claim}>labor für gestaltung</div>
                 </Link>
                 <Menu />
             </nav>
