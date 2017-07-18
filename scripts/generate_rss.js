@@ -4,7 +4,7 @@ import loadPosts from './util/loadPosts';
 import buildFeeds from './util/buildFeeds';
 
 const posts = loadPosts({
-  limit: 20,
+    limit: 20,
 });
 
 buildFeeds(posts);
