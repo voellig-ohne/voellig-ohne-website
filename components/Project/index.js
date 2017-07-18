@@ -9,6 +9,7 @@ import style from './style.module.less';
 export default class Project extends React.Component {
     constructor() {
         super();
+        this.handleResize = this.handleResize.bind(this);
         if (typeof window !== 'undefined') {
             this.state = { windowWidth: window.innerWidth };
         } else {
@@ -18,13 +19,13 @@ export default class Project extends React.Component {
 
     componentDidMount() {
         if (typeof window !== 'undefined') {
-            window.addEventListener('resize', () => this.handleResize());
+            window.addEventListener('resize', this.handleResize);
         }
     }
 
     componentWillUnmount() {
         if (typeof window !== 'undefined') {
-            window.removeEventListener('resize', () => this.handleResize());
+            window.removeEventListener('resize', this.handleResize);
         }
     }
 
