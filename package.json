@@ -22,7 +22,8 @@
     "object-assign": "^4.1.0",
     "react-document-title": "^2.0.1",
     "react-router": "^2.4.0",
-    "toml-js": "0.0.8"
+    "toml-js": "0.0.8",
+    "prettier": "1.5.2"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
@@ -52,6 +53,10 @@
     "testBuild": "gatsby serve-build",
     "deploy": "rsync -avzc --del public/ voellig@antares.uberspace.de:/home/voellig/html/",
     "deploy-test": "rsync -avzc --del public/ voellig@antares.uberspace.de:/var/www/virtual/voellig/test.volligohne.de/",
-    "generate-rss": "babel-node scripts/generate_rss.js"
+    "generate-rss": "babel-node scripts/generate_rss.js",
+    "prettier-default": "prettier --single-quote --tab-width 4 --print-width 120 --trailing-comma es5",
+    "prettier-all": "npm run prettier-default -- '{*.js,!(node_modules|public)/**/!(*.min).js}'",
+    "prettier-write": "npm run prettier-default -- --write",
+    "format": "npm run prettier-all -- --write"
   }
 }
