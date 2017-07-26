@@ -4,6 +4,8 @@ import { prefixLink } from 'gatsby-helpers';
 import piwikConfig from 'piwik';
 import { config } from 'config';
 
+const BUILD_TIME = new Date().getTime();
+
 require('file?name=.htaccess!./.htaccess');
 
 export default class Main extends React.Component {
@@ -47,7 +49,7 @@ export default class Main extends React.Component {
                 </head>
                 <body>
                     <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
-                    <script src={prefixLink('/bundle.js')} />
+                    <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
 
                     {piwikSetup}
                 </body>
