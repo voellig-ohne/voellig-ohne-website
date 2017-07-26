@@ -1,12 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
+import { map } from 'lodash';
+import classNames from 'classnames';
 
 import style from './style.module.less';
 
 import ANTWORT from './antwort.json';
 
 export default class Einladung extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            antwort: map(ANTWORT, row => {
+                return map(row, word => false);
+            }),
+        };
+        this.toggleWord = this.toggleWord.bind(this);
+    }
+
     render() {
         console.log(ANTWORT);
         return (
@@ -16,7 +28,6 @@ export default class Einladung extends React.Component {
                         einladung <del>ausladung hinweis</del>
                     </h2>
                     <p>
-                        <br />
                         <del>eröffnung jubiläum umzug</del> werkschau <del>neueröffnung räumungsverkauf schließung</del>
                         <br />
                         <del>mo di mi do</del> fr <del>sa so</del>
@@ -39,8 +50,45 @@ export default class Einladung extends React.Component {
                 </section>
                 <section className="vo-section">
                     <h2>Antwort (nicht zutreffendes streichen)</h2>
+                    <Antwort antwort={ANTWORT} antwortState={this.state.antwort} onClick={this.toggleWord} />
+                    <button className={style.button}>Antwort abschicken</button>
                 </section>
             </div>
         );
     }
+
+    toggleWord(row, word) {
+        console.log(this);
+        this.state.antwort[row][word] = !this.state.antwort[row][word];
+        this.setState({
+            antwort: this.state.antwort,
+        });
+    }
+}
+
+function Antwort({ antwort, antwortState, onClick }) {
+    return (
+        <p>
+            {map(antwort, (row, rowidx) => {
+                return (
+                    <span key={rowidx}>
+                        {map(row, (word, wordidx) => {
+                            return (
+                                <button
+                                    className={classNames(style.antwort_word, {
+                                        [style.antwort_word__ohne]: antwortState[rowidx][wordidx],
+                                    })}
+                                    key={wordidx}
+                                    onClick={() => onClick(rowidx, wordidx)}
+                                >
+                                    {word}
+                                </button>
+                            );
+                        })}
+                        <br />
+                    </span>
+                );
+            })}
+        </p>
+    );
 }
