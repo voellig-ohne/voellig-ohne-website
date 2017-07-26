@@ -20,7 +20,6 @@ export default class Einladung extends React.Component {
     }
 
     render() {
-        console.log(ANTWORT);
         return (
             <div className="vo-section_wrapper">
                 <section className="vo-section">
@@ -58,7 +57,6 @@ export default class Einladung extends React.Component {
     }
 
     toggleWord(row, word) {
-        console.log(this);
         this.state.antwort[row][word] = !this.state.antwort[row][word];
         this.setState({
             antwort: this.state.antwort,
