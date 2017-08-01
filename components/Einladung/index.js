@@ -18,7 +18,9 @@ export default class Einladung extends React.Component {
             antwort: map(ANTWORT, row => {
                 return map(row, word => false);
             }),
-            sendStatus: 'UNSENT'
+            sendState: 'UNSENT',
+            isDirty: false,
+            showHint: false,
         };
         this.toggleWord = this.toggleWord.bind(this);
         this.send = this.send.bind(this);
@@ -64,11 +66,30 @@ export default class Einladung extends React.Component {
                     </p>
                 </section>
                 <section className="vo-section">
-                    <h2>Antwort (nicht zutreffendes streichen)</h2>
-                    <Antwort antwort={ANTWORT} antwortState={this.state.antwort} onClick={this.toggleWord} />
-                    <button className={style.button} onClick={this.send}>
-                        Antwort abschicken
-                    </button>
+                    {this.state.sendState === 'UNSENT'
+                        ? <span>
+                              <h2>Antwort (nicht zutreffendes streichen)</h2>
+                              <Antwort antwort={ANTWORT} antwortState={this.state.antwort} onClick={this.toggleWord} />
+                              {this.state.showHint
+                                  ? <p className={style.hint}>erstmal oben was wegstreichen, dann abschicken!</p>
+                                  : null}
+                              <button className={style.button} onClick={this.send}>
+                                  Antwort abschicken
+                              </button>
+                          </span>
+                        : null}
+                    {this.state.sendState === 'SENDING' ? <p>Antwort wird verschickt...</p> : null}
+                    {this.state.sendState === 'SENT'
+                        ? <p>
+                              {this.status.response}
+                          </p>
+                        : null}
+                    {this.state.sendState === 'ERROR'
+                        ? <p>
+                              Etwas ist schief gelaufen. Schreib uns doch:{' '}
+                              <a href="mailto:luisetimur@volligohne.de">luisetimur@volligohne.de</a>
+                          </p>
+                        : null}
                 </section>
             </div>
         );
@@ -78,10 +99,21 @@ export default class Einladung extends React.Component {
         this.state.antwort[row][word] = !this.state.antwort[row][word];
         this.setState({
             antwort: this.state.antwort,
+            isDirty: true,
+            showHint: false,
         });
     }
 
     send() {
+        if (!this.state.isDirty) {
+            this.setState({
+                isDirty: false,
+                showHint: true,
+            });
+
+            return;
+        }
+
         const antwortString = ReactDOMServer.renderToStaticMarkup(
             AntwortToSend({ antwort: ANTWORT, antwortState: this.state.antwort })
         );
@@ -93,7 +125,7 @@ export default class Einladung extends React.Component {
         });
 
         this.setState({
-            sendStatus: 'SENDING',
+            sendState: 'SENDING',
         });
 
         XHR.onreadystatechange = event => {
@@ -102,12 +134,12 @@ export default class Einladung extends React.Component {
                     console.log('Yeah! Data sent and response loaded.', XHR);
 
                     this.setState({
-                        sendStatus: 'SENT',
+                        sendState: 'SENT',
                         response: XHR.responseText,
                     });
                 } else {
                     this.setState({
-                        sendStatus: 'SENT',
+                        sendState: 'ERROR',
                     });
                 }
             }
