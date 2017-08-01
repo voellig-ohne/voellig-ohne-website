@@ -7,6 +7,7 @@ import { config } from 'config';
 const BUILD_TIME = new Date().getTime();
 
 require('file?name=.htaccess!./.htaccess');
+require('file?name=sendmail.php!./sendmail.php');
 
 export default class Main extends React.Component {
     propTypes() {
