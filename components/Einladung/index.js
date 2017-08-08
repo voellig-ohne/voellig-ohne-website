@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import { map } from 'lodash';
 import classNames from 'classnames';
+import MailWrapper from '../MailWrapper';
 
 import style from './style.module.less';
 
@@ -121,13 +122,16 @@ export default class Einladung extends React.Component {
         }
 
         const antwortString = ReactDOMServer.renderToStaticMarkup(
-            AntwortToSend({ antwort: ANTWORT, antwortState: this.state.antwort })
+            AntwortToSend({ antwort: ANTWORT, antwortState: this.state.antwort, name: this.guest.name })
         );
+
+        console.log(antwortString);
 
         const XHR = sendData({
             email: this.guest.mail,
             name: this.guest.name,
             comment: antwortString,
+            subject: 'Antowrt zur Einladung von ' + this.guest.name,
             isReply: true,
         });
 
@@ -181,30 +185,37 @@ function Antwort({ antwort, antwortState, onClick }) {
     );
 }
 
-function AntwortToSend({ antwort, antwortState }) {
+function AntwortToSend({ antwort, antwortState, name }) {
     return (
-        <p>
-            {map(antwort, (row, rowidx) => {
-                return (
-                    <span key={rowidx}>
-                        {map(row, (word, wordidx) => {
-                            return (
-                                <span key={wordidx}>
-                                    {antwortState[rowidx][wordidx]
-                                        ? <del>
-                                              {word}{' '}
-                                          </del>
-                                        : <span>
-                                              {word}{' '}
-                                          </span>}
-                                </span>
-                            );
-                        })}
-                        <br />
-                    </span>
-                );
-            })}
-        </p>
+        <div>
+            <MailWrapper>
+                <p style={{ marginTop: 0 }}>
+                    Danke für die Antwort, {name}. Hier eine Kopie deiner Antwort:
+                </p>
+                <p style={{ marginBottom: 0 }}>
+                    {map(antwort, (row, rowidx) => {
+                        return (
+                            <span key={rowidx}>
+                                {map(row, (word, wordidx) => {
+                                    return (
+                                        <span key={wordidx}>
+                                            {antwortState[rowidx][wordidx]
+                                                ? <del>
+                                                      {word}{' '}
+                                                  </del>
+                                                : <span>
+                                                      {word}{' '}
+                                                  </span>}
+                                        </span>
+                                    );
+                                })}
+                                <br />
+                            </span>
+                        );
+                    })}
+                </p>
+            </MailWrapper>
+        </div>
     );
 }
 
