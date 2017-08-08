@@ -81,7 +81,7 @@ export default class Einladung extends React.Component {
                     {this.state.sendState === 'SENDING' ? <p>Antwort wird verschickt...</p> : null}
                     {this.state.sendState === 'SENT'
                         ? <p>
-                              {this.status.response}
+                              {this.state.response}
                           </p>
                         : null}
                     {this.state.sendState === 'ERROR'
