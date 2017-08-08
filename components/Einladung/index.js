@@ -128,6 +128,7 @@ export default class Einladung extends React.Component {
             email: this.guest.mail,
             name: this.guest.name,
             comment: antwortString,
+            isReply: true,
         });
 
         this.setState({
