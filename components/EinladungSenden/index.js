@@ -49,7 +49,6 @@ export default class Einladung extends React.Component {
             name: name,
             comment: antwortString,
             subject: 'völlig ohne Einladung zur Werkschau',
-            isReply: false,
         });
 
         this.setState({
@@ -82,7 +81,7 @@ function AntwortToSend({ name, link }) {
                 <p style={{ marginTop: 0 }}>
                     Hallo {name},
                 </p>
-                <p>Hiermit laden wir Dich ein zu unserer Werkschau am 8. September.</p>
+                <p>hiermit laden wir Dich ein zu unserer Werkschau am 8. September.</p>
                 <p>
                     Bitte klicke <a href={link}>hier</a>, um zu- oder abzusagen.
                 </p>

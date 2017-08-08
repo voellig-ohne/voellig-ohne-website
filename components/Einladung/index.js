@@ -125,13 +125,11 @@ export default class Einladung extends React.Component {
             AntwortToSend({ antwort: ANTWORT, antwortState: this.state.antwort, name: this.guest.name })
         );
 
-        console.log(antwortString);
-
         const XHR = sendData({
             email: this.guest.mail,
             name: this.guest.name,
             comment: antwortString,
-            subject: 'Antowrt zur Einladung von ' + this.guest.name,
+            subject: 'Antwort zur Einladung von ' + this.guest.name,
             isReply: true,
         });
 
@@ -190,7 +188,7 @@ function AntwortToSend({ antwort, antwortState, name }) {
         <div>
             <MailWrapper>
                 <p style={{ marginTop: 0 }}>
-                    Danke für die Antwort, {name}. Hier eine Kopie deiner Antwort:
+                    Danke für die Antwort, {name}. Hier eine Kopie:
                 </p>
                 <p style={{ marginBottom: 0 }}>
                     {map(antwort, (row, rowidx) => {
