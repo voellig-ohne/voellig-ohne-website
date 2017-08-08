@@ -39,9 +39,15 @@ export default class Einladung extends React.Component {
         return (
             <div className="vo-section_wrapper">
                 <section className="vo-section">
-                    <h2>
-                        einladung <del>ausladung hinweis</del> für <del>von</del> {this.guest.name}
-                    </h2>
+                    <h1>
+                        einladung für {this.guest.name}
+                    </h1>
+
+                    <p>
+                        Interaktive Werkschau mit langsamem Cocktaildrucker, umständlicher Illustrationsmaschine und
+                        gewöhnlichen Corporate Identities.
+                    </p>
+
                     <p>
                         <del>eröffnung jubiläum umzug</del> werkschau <del>neueröffnung räumungsverkauf schließung</del>{' '}
                         <br />
@@ -68,7 +74,7 @@ export default class Einladung extends React.Component {
                 <section className="vo-section">
                     {this.state.sendState === 'UNSENT'
                         ? <span>
-                              <h2>Antwort (nicht zutreffendes streichen)</h2>
+                              <h1>Antwort (nicht zutreffendes streichen)</h1>
                               <Antwort antwort={ANTWORT} antwortState={this.state.antwort} onClick={this.toggleWord} />
                               {this.state.showHint
                                   ? <p className={style.hint}>erstmal oben was wegstreichen, dann abschicken!</p>
