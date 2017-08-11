@@ -27,7 +27,7 @@ export default class Einladung extends React.Component {
                     {map(ADRESSEN, (user, idx) => {
                         return (
                             <button style={{ display: 'block' }} key={idx} onClick={() => this.send(user)}>
-                                {user.name}
+                                {user.name} {user.mail}
                             </button>
                         );
                     })}
@@ -81,9 +81,12 @@ function AntwortToSend({ name, link }) {
                 <p style={{ marginTop: 0 }}>
                     Hallo {name},
                 </p>
-                <p>hiermit laden wir Dich ein zu unserer Werkschau am 8. September.</p>
                 <p>
-                    Bitte klicke <a href={link}>hier</a>, um zu- oder abzusagen.
+                    hiermit laden wir Dich ein zu unserer Werkschau am 8. September. Mit langsamem Cocktaildrucker,
+                    umständlicher Illustrationsmaschine und gewöhnlichen Corporate Identities.{' '}
+                </p>
+                <p>
+                    Zu- oder Absage bitte <a href={link}>hier</a>.
                 </p>
                 <p>Bis dahin</p>
                 <p>völlig ohne Grüße</p>
