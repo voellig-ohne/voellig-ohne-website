@@ -176,7 +176,7 @@ function Antwort({ antwort, antwortState, onClick }) {
         <p>
             {map(antwort, (row, rowidx) => {
                 return (
-                    <span key={rowidx}>
+                    <span key={rowidx} className={style.line}>
                         {map(row, (word, wordidx) => {
                             return (
                                 <button
