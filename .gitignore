@@ -30,3 +30,5 @@ node_modules
 
 public
 sendmail.php
+
+components/EinladungSenden/adressen.json
