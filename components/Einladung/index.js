@@ -44,32 +44,47 @@ export default class Einladung extends React.Component {
                         einladung für {this.guest.name}
                     </h1>
 
-                    <p>
-                        Interaktive Werkschau mit langsamem Cocktaildrucker, umständlicher Illustrationsmaschine und
-                        gewöhnlichen Corporate Identities.
-                    </p>
-
-                    <p>
-                        <del>eröffnung jubiläum umzug</del> werkschau <del>neueröffnung räumungsverkauf schließung</del>{' '}
-                        <br />
-                        <del>mo di mi do</del> fr <del>sa so</del>
-                        <br />
-                        <span className={style.dates}>
-                            <del>1 2 3 4 5 6 7</del> 8{' '}
-                            <del>9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31</del>
+                    <p className={style.strokes}>
+                        <span className={style.line}>
+                            <del>eröffnung jubiläum umzug</del> werkschau{' '}
+                            <del>neueröffnung räumungsverkauf schließung</del>{' '}
                         </span>
-                        <br />
-                        <del>jan feb mär apr jun jul aug</del> sep <del>okt nov dez</del>
-                        <br />
-                        <del>2016</del> 2017 <del>2018 2019 2020</del>
-                        <br />
-                        <del>00 01 02 03 04 05 06</del> 07 <del>08 09 10 11 12 am</del> pm
-                        <br />
-                        sonnen <del>monde sterne</del> allee <del>straße weg</del> 200
-                        <br />
-                        <del>alt</del> neu kölln
-                        <br />
-                        sekt <del>bratwurst</del> wein <del>mettigel</del> schnapps bier
+                        <span className={style.line}>
+                            <del>schneller</del> langsamer <del>bescheidener</del> Cocktaildrucker
+                        </span>
+                        <span className={style.line}>
+                            {' '}<del>komplexe</del> umständliche <del>ausgefeilte einfache</del> Illustrationsmaschine
+                        </span>
+                        <span className={style.line}>
+                            {' '}<del>außer- über- un-</del>gewöhnliche Corporate Identities
+                        </span>
+                        <span className={style.line}>
+                            {' '}<del>mo di mi do</del> fr <del>sa so</del>
+                        </span>
+                        <span className={style.line}>
+                            {' '}<span className={style.dates}>
+                                <del>1 2 3 4 5 6 7</del> 8{' '}
+                                <del>9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31</del>
+                            </span>
+                        </span>
+                        <span className={style.line}>
+                            {' '}<del>jan feb mär apr jun jul aug</del> sep <del>okt nov dez</del>
+                        </span>
+                        <span className={style.line}>
+                            {' '}<del>2016</del> 2017 <del>2018 2019 2020</del>
+                        </span>
+                        <span className={style.line}>
+                            {' '}<del>00 01 02 03 04 05 06</del> 07 <del>08 09 10 11 12 am</del> pm
+                        </span>
+                        <span className={style.line}>
+                            {' '}sonnen <del>monde sterne</del> allee <del>straße weg</del> 200
+                        </span>
+                        <span className={style.line}>
+                            {' '}<del>alt</del> neu kölln
+                        </span>
+                        <span className={style.line}>
+                            {' '}sekt <del>bratwurst</del> wein <del>mettigel</del> schnapps bier
+                        </span>
                     </p>
                 </section>
                 <section className="vo-section">
@@ -175,7 +190,6 @@ function Antwort({ antwort, antwortState, onClick }) {
                                 </button>
                             );
                         })}
-                        <br />
                     </span>
                 );
             })}
