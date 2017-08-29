@@ -10,7 +10,7 @@ function MailWrapper({ children }) {
             }}
         >
             <div style={{ textAlign: 'center', paddingTop: '1rem' }}>
-                <img src={sternchen} style={{ width: '46px' }} />
+                <img src={sternchen} style={{ width: '40px' }} />
             </div>
             <div
                 style={{
