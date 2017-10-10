@@ -10,7 +10,6 @@ const MAIL_SERVER = '/sendmail.php/';
 
 export default class Einladung extends React.Component {
     constructor(props) {
-        console.log(ADRESSEN);
         super(props);
         this.state = {
             response: '',
@@ -36,13 +35,10 @@ export default class Einladung extends React.Component {
         );
     }
     send({ mail, name, link }) {
-        console.log(link);
         const antwortString = ReactDOMServer.renderToStaticMarkup(AntwortToSend({ mail, name, link })).replace(
             '&amp;name',
             '&name'
         );
-
-        console.log(antwortString);
 
         const XHR = sendData({
             email: mail,
