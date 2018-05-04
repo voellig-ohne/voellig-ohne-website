@@ -1,8 +1,8 @@
 ---
 title: met.cat
-what: GESTALTUNGS- & KOMMUNIKATIONSKONZEPT, WEBKONZEPT
+what: GESTALTUNGS- & KOMMUNIKATIONSKONZEPT
 what2: logo, postkartenserie, gestaltung und umsetzung website, fotokonzept, geschäftsausstattung, marketingstrategie, text
-date: in der Entwicklung
+date: 2016
 mainImage: IMG_4374-Edit
 description: Catering-Unternehmen aus Berlin
 order: 4
@@ -21,5 +21,3 @@ Primäres Gestaltungselement sind streng angeordnete Häppchen, fotografiert a
 Ansprechende, knallige Farben verleiten sowohl den Gourmet als auch den Laien zum anbeißen. Die grafische Aufgeräumtheit ergänzt den Eindruck großer Leidenschaft für Essen um die Wahrnehmung als zuverlässiger Geschäftspartner.
 
 So schafft met.cat den Spagat zwischen leistungsfähiger Professionalität und liebevoller Persönlichkeit.
-
-www.metcat.de
