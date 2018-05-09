@@ -1,8 +1,8 @@
 import React from 'react';
-import DocumentTitle from 'react-document-title';
 import { prefixLink } from 'gatsby-helpers';
 import piwikConfig from 'piwik';
 import { config } from 'config';
+import Helmet from 'react-helmet';
 
 const BUILD_TIME = new Date().getTime();
 
@@ -16,7 +16,7 @@ export default class Main extends React.Component {
         };
     }
     render() {
-        const title = DocumentTitle.rewind();
+        const head = Helmet.rewind();
 
         const piwikSetup = buildPiwikSetup(piwikConfig);
 
@@ -34,10 +34,8 @@ export default class Main extends React.Component {
                         name="viewport"
                         content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no"
                     />
-                    <meta name="description" content={config.tagLine} />
-                    <title>
-                        {title}
-                    </title>
+                    {head.title.toComponent()}
+                    {head.meta.toComponent()}
                     <link rel="shortcut icon" href={'/favicon.png'} />
                     <link
                         key="alternate"

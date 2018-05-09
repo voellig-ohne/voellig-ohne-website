@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Header from 'components/Header'
-import DocumentTitle from 'react-document-title'
+import Helmet from 'react-helmet';
 import { config } from 'config'
 import NextPrev from 'pages/projekte/_next-prev.js'
 import Image from 'components/ResponsiveImage'
@@ -46,9 +46,9 @@ export default class ProjectTemplate extends React.Component {
                         return (
                             <li key={idx}>
                                 <div className="embed_container">
-                                    <iframe 
-                                        src={image.vimeo} 
-                                        frameBorder='0' 
+                                    <iframe
+                                        src={image.vimeo}
+                                        frameBorder='0'
                                         allowFullScreen />
                                 </div>
                             </li>
@@ -83,7 +83,7 @@ export default class ProjectTemplate extends React.Component {
             }
 
             projectList.push(
-                <Project 
+                <Project
                         page={page}
                         status={status}
                         key={page.path}>
@@ -95,17 +95,16 @@ export default class ProjectTemplate extends React.Component {
         })
 
         return (
-            <DocumentTitle title={`${config.siteTitle} | projekte`}>
-                <main>
-                    <ul className={style.list}>
-                        {projectList}
-                    </ul>
-                </main>
-            </DocumentTitle>
+            <main>
+                <ul className={style.list}>
+                    {projectList}
+                </ul>
+                <Helmet title={`${config.siteTitle} | projekte`} />
+            </main>
         )
     }
 }
 
 function mod(n, m) {
-        return ((n % m) + m) % m;
+    return ((n % m) + m) % m;
 }

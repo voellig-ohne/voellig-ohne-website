@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
-import DocumentTitle from 'react-document-title';
+import Helmet from 'react-helmet';
 import { config } from 'config';
 import Menu from 'components/Menu';
 
 export default class Index extends React.Component {
     render() {
+        // return <Helmet title={config.siteTitle} />;
         return (
-            <DocumentTitle title={config.siteTitle}>
-                <div />
-            </DocumentTitle>
+            <div>
+                <Helmet title={config.siteTitle} />
+            </div>
         );
     }
 }

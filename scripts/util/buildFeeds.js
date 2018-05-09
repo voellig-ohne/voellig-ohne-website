@@ -23,7 +23,7 @@ export default function buildFeeds(posts) {
     const feed = new Feed({
         title: config.siteTitle,
         id: `${config.domain}/`,
-        description: config.tagLine,
+        description: config.description,
         link: config.domain,
         copyright: `All rights reserved ${now.format('YYYY')}, Völlig Ohne`,
         updated: now.toJSON(),

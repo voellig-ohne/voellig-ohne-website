@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import Header from 'components/Header';
-import DocumentTitle from 'react-document-title';
+import Helmet from 'react-helmet';
 import { config } from 'config';
 import { filter, sortBy, flow } from 'lodash';
 import Image from 'components/ResponsiveImage';
@@ -110,9 +110,10 @@ export default class NeuigkeitenTemplate extends React.Component {
         }
 
         return (
-            <DocumentTitle title={`${config.siteTitle} | projekte`}>
+            <div>
                 {newsIntro}
-            </DocumentTitle>
+                <Helmet title={`${config.siteTitle} | projekte`} />
+            </div>
         );
     }
 }
