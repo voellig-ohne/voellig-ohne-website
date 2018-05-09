@@ -38,11 +38,6 @@ export default class Project extends React.Component {
     render() {
         const { page, className, status } = this.props;
 
-        const crossRotation = Math.atan(350 / this.state.windowWidth) * (180 / Math.PI);
-
-        const crossTransform = { transform: 'rotate(' + crossRotation + 'deg)' };
-        const crossTransform2 = { transform: 'rotate(-' + crossRotation + 'deg)' };
-
         const containerClasses = classNames(
             className,
             style.container,
@@ -100,13 +95,6 @@ export default class Project extends React.Component {
                             : null}
                     </div>
                 </div>
-
-                {status.isOpen
-                    ? null
-                    : <span>
-                          <div className={style.cross} style={crossTransform} />
-                          <div className={style.cross} style={crossTransform2} />
-                      </span>}
 
                 {this.props.children}
             </li>

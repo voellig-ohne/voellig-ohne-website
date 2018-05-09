@@ -2,7 +2,6 @@
 @collapsedHeight: 25rem;
 
 .container {
-
     list-style: none;
     position: relative;
     text-align: center;
@@ -27,17 +26,11 @@
         overflow: hidden;
     }
 
-    &__open:hover {
+    &__listed:hover {
         .main_image {
             -webkit-filter: brightness(1.1);
             filter: brightness(1.1);
-        }
-    }
-
-    &:hover {
-        .cross {
-            height: 0rem;
-            margin-top: 0;
+            transform: scale(1.05);
         }
     }
 }
@@ -50,7 +43,7 @@
     top: 0;
     left: 0;
     z-index: -2;
-    transition: filter .1s, -webkit-filter .1s;
+    transition: filter .1s, -webkit-filter .1s, transform .1s;
 
     &__open {
         position: fixed;
@@ -88,17 +81,4 @@
 
 .body {
     text-align: left;
-}
-
-.cross {
-    background: black;
-    height: .5rem;
-    width: 200%;
-    position: absolute;
-    top: 50%;
-    margin-top: -.25rem;
-    left: -50%;
-    transition: all .1s;
-    transform: rotate(20deg);
-    z-index: 1;
 }
