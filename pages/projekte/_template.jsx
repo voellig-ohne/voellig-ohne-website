@@ -7,6 +7,7 @@ import { config } from 'config';
 import NextPrev from 'pages/projekte/_next-prev.js';
 import Image from 'components/ResponsiveImage';
 import Project from 'components/Project';
+import ImagePath from 'components/ImagePath';
 
 import style from './project-list.module.less';
 
@@ -14,6 +15,8 @@ export default class ProjectTemplate extends React.Component {
     render() {
         const projectList = [];
         const currentPath = '/projekte/';
+        let title;
+        let meta;
 
         const projects = this.props.route.pages
             .filter(page => {
@@ -87,17 +90,38 @@ export default class ProjectTemplate extends React.Component {
                 </Project>
             );
         });
-        console.log(projectList);
+
+        if (projectList.length === 1) {
+            const project = projectList[0].props.page.data;
+            const path = projectList[0].props.page.path;
+
+            title = `${config.siteTitle} | projekte | ${project.title}`
+            const description = `${project.title} – ${project.description}`
+            meta = [{
+                name: 'description',
+                content: description
+            }, {
+                property: 'og:description',
+                content: description
+            }, {
+                property: 'og:image',
+                content: ImagePath({source: project.mainImage, location: path})
+            }, {
+                name: 'twitter:card',
+                content: 'summary_large_image'
+            }]
+
+        } else {
+            title = `${config.siteTitle} | projekte`
+            meta = [];
+        }
 
         return (
             <main>
                 <ul className={style.list}>
                     {projectList}
                 </ul>
-
-                {projectList.length !== 1
-                    ? <Helmet title={`${config.siteTitle} | projekte`} />
-                    : <Helmet title={`${config.siteTitle} | projekte | ${projectList[0].props.page.data.title}`} />}
+                <Helmet title={title} meta={meta} />
             </main>
         );
     }

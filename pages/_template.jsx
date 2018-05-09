@@ -20,6 +20,12 @@ export default class IndexTemplate extends React.Component {
         }, {
             property: 'og:description',
             content: config.description
+        }, {
+            property: 'og:image',
+            content: require('!file-loader!./default-og-image.png')
+        }, {
+            name: 'twitter:site',
+            content: '@volligohne'
         }]
 
         return (

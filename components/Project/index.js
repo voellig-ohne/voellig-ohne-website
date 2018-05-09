@@ -93,7 +93,6 @@ export default class Project extends React.Component {
                             ? <div>
                                   <div className={style.separator} />
                                   <div className={style.body} dangerouslySetInnerHTML={{ __html: page.data.body }} />
-                                  {/* <Helmet title={`${config.siteTitle} | projekte | ${page.data.title}`} /> */}
                               </div>
                             : null}
                     </div>
