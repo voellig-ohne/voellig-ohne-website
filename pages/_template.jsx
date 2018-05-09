@@ -24,11 +24,11 @@ export default class IndexTemplate extends React.Component {
 
         return (
             <div className={isRoot ? 'vo-root': ''}>
+                <Helmet title={config.siteTitle} meta={meta} />
                 <Header isRoot={isRoot}></Header>
                 <div className="vo-wrapper">
                     {this.props.children}
                 </div>
-                <Helmet title={config.siteTitle} meta={meta} />
             </div>
         )
     }

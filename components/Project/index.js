@@ -3,6 +3,8 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import Image from 'components/ResponsiveImage';
 import classNames from 'classnames';
+import Helmet from 'react-helmet';
+import { config } from 'config';
 
 import style from './style.module.less';
 
@@ -91,6 +93,7 @@ export default class Project extends React.Component {
                             ? <div>
                                   <div className={style.separator} />
                                   <div className={style.body} dangerouslySetInnerHTML={{ __html: page.data.body }} />
+                                  {/* <Helmet title={`${config.siteTitle} | projekte | ${page.data.title}`} /> */}
                               </div>
                             : null}
                     </div>

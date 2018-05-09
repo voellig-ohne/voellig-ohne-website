@@ -6,10 +6,6 @@ import { config } from 'config';
 
 export default class Neuigkeiten extends React.Component {
     render() {
-        return (
-            <div>
-                <Helmet title={`${config.siteTitle} | neuigkeiten`} />
-            </div>
-        );
+        return <div />;
     }
 }

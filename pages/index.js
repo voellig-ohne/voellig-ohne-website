@@ -7,7 +7,6 @@ import Menu from 'components/Menu';
 
 export default class Index extends React.Component {
     render() {
-        // return <Helmet title={config.siteTitle} />;
         return (
             <div>
                 <Helmet title={config.siteTitle} />

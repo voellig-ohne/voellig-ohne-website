@@ -69,6 +69,7 @@ export default class NeuigkeitenTemplate extends React.Component {
                 <div className="vo-section_wrapper vo_news-wrapper">
                     {this.props.children}
                     {newsItems}
+                    <Helmet title={`${config.siteTitle} | neuigkeiten`} />
                 </div>
             );
         } else {
@@ -105,6 +106,7 @@ export default class NeuigkeitenTemplate extends React.Component {
                     <ul className="vo_news-gallery">
                         {gallery}
                     </ul>
+                    <Helmet title={`${config.siteTitle} | neuigkeiten | ${page.data.title}`} />
                 </div>
             );
         }
@@ -112,7 +114,6 @@ export default class NeuigkeitenTemplate extends React.Component {
         return (
             <div>
                 {newsIntro}
-                <Helmet title={`${config.siteTitle} | projekte`} />
             </div>
         );
     }

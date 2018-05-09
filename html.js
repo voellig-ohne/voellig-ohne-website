@@ -34,8 +34,6 @@ export default class Main extends React.Component {
                         name="viewport"
                         content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no"
                     />
-                    {head.title.toComponent()}
-                    {head.meta.toComponent()}
                     <link rel="shortcut icon" href={'/favicon.png'} />
                     <link
                         key="alternate"
@@ -44,6 +42,8 @@ export default class Main extends React.Component {
                         title={config.pageTitle}
                         href={`${config.domain}/rss.xml`}
                     />
+                    {head.title.toComponent()}
+                    {head.meta.toComponent()}
                     {css}
                 </head>
                 <body>
