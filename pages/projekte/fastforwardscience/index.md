@@ -1,7 +1,7 @@
 ---
 title: Fastforward:Science
-what: Redesign, Website, Drucksachen
-what2: website, verschiedene drucksachen
+what: GESTALTUNGS- & KOMMUNIKATIONSKONZEPT
+what2: website, flyer, poster
 date: 2018
 description: Der Webvideo-Wettbewerb für die Wissenschaft
 mainImage: 240

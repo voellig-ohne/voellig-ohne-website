@@ -1,7 +1,7 @@
 ---
 title: Base.
-what: magazin, A4, auflage 2500 stück
-what2: in zusammenarbeit mit dem illustrator timo becker
+what: GESTALTUNG
+what2: magazin A4, in zusammenarbeit mit dem illustrator timo becker
 date: 2018
 description: Popup-Galerie
 mainImage: IMG_5157

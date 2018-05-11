@@ -1,7 +1,7 @@
 ---
 title: Vostel
-what: CI UPDATE, WEBSITE, SUCHMASKE
-what2: website, verschiedene drucksachen
+what: GESTALTUNGS- & KOMMUNIKATIONSKONZEPT
+what2: website, suchmaske, drucksachen
 date: 2017/2018
 description: Digitale Engagementplattform mit Herz
 mainImage: IMG_5081

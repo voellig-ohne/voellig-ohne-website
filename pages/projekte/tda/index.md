@@ -1,7 +1,7 @@
 ---
 title: TRANSFORAMTION DES ALTERNATIVEN
-what: Logo, Gestaltungskonzept
-what2: Buch im Buch
+what: GESTALTUNG & KONZEPT
+what2: logo, buch im buch
 date: 2017
 description: Veranstaltungsreihe
 mainImage: TDA-291
