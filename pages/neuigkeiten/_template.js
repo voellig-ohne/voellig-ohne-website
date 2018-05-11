@@ -103,6 +103,10 @@ export default class NeuigkeitenTemplate extends React.Component {
                     name: 'twitter:card',
                     content: 'summary_large_image',
                 },
+                {
+                    property: 'og:type',
+                    content: 'article',
+                },
             ];
 
             newsIntro = (

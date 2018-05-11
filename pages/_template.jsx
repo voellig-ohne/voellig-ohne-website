@@ -29,6 +29,9 @@ export default class IndexTemplate extends React.Component {
         },{
             property: 'og:title',
             content: config.siteTitle,
+        }, {
+            property: 'og:type',
+            content: 'website'
         }]
 
         return (
