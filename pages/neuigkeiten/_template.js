@@ -6,6 +6,7 @@ import Helmet from 'react-helmet';
 import { config } from 'config';
 import { filter, sortBy, flow } from 'lodash';
 import Image from 'components/ResponsiveImage';
+import ImagePath from 'components/ImagePath';
 
 import './neuigkeiten.less';
 
@@ -92,7 +93,11 @@ export default class NeuigkeitenTemplate extends React.Component {
             const meta = [
                 {
                     property: 'og:title',
-                    content: page.data.title + ' | ' + config.siteTitle,
+                    content: `völlig ohne neuigkeit: ${page.data.title}`,
+                },
+                {
+                    property: 'og:image',
+                    content: ImagePath({ source: page.data.mainImage, location: page.path }),
                 },
             ];
 
