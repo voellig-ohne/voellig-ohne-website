@@ -109,11 +109,17 @@ export default class ProjectTemplate extends React.Component {
             }, {
                 name: 'twitter:card',
                 content: 'summary_large_image'
+            }, {
+                property: 'og:title',
+                content: project.title + ' | ' + config.siteTitle,
             }]
 
         } else {
             title = `${config.siteTitle} | projekte`
-            meta = [];
+            meta = [{
+                property: 'og:title',
+                content: 'projekte | ' + config.siteTitle,
+            }];
         }
 
         return (

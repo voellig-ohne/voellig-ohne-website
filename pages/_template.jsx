@@ -26,6 +26,9 @@ export default class IndexTemplate extends React.Component {
         }, {
             name: 'twitter:site',
             content: '@volligohne'
+        },{
+            property: 'og:title',
+            content: config.siteTitle,
         }]
 
         return (

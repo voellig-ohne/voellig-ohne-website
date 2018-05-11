@@ -89,6 +89,13 @@ export default class NeuigkeitenTemplate extends React.Component {
                 });
             }
 
+            const meta = [
+                {
+                    property: 'og:title',
+                    content: page.data.title + ' | ' + config.siteTitle,
+                },
+            ];
+
             newsIntro = (
                 <div>
                     <div className="vo-section_wrapper">
@@ -106,7 +113,8 @@ export default class NeuigkeitenTemplate extends React.Component {
                     <ul className="vo_news-gallery">
                         {gallery}
                     </ul>
-                    <Helmet title={`${config.siteTitle} | neuigkeiten | ${page.data.title}`} />
+
+                    <Helmet meta={meta} title={`${config.siteTitle} | neuigkeiten | ${page.data.title}`} />
                 </div>
             );
         }
