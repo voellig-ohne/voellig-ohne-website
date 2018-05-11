@@ -35,6 +35,8 @@ export default class Main extends React.Component {
                 <head>
                     <meta charSet="utf-8" />
                     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+                    {head.title.toComponent()}
+                    {metaStuff}
                     <meta
                         name="viewport"
                         content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no"
@@ -47,8 +49,6 @@ export default class Main extends React.Component {
                         title={config.pageTitle}
                         href={`${config.domain}/rss.xml`}
                     />
-                    {head.title.toComponent()}
-                    {metaStuff}
                     {css}
                 </head>
                 <body>
