@@ -99,6 +99,10 @@ export default class NeuigkeitenTemplate extends React.Component {
                     property: 'og:image',
                     content: ImagePath({ source: page.data.mainImage, location: page.path }),
                 },
+                {
+                    name: 'twitter:card',
+                    content: 'summary_large_image',
+                },
             ];
 
             newsIntro = (
