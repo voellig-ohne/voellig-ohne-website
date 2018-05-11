@@ -96,7 +96,7 @@ export default class ProjectTemplate extends React.Component {
             const path = projectList[0].props.page.path;
 
             title = `${config.siteTitle} | projekte | ${project.title}`
-            const description = `${project.title} – ${project.description}`
+            const description = `${project.description} ** ${project.date} ** ${project.what} ** ${project.what2} `
             meta = [{
                 name: 'description',
                 content: description
@@ -111,7 +111,7 @@ export default class ProjectTemplate extends React.Component {
                 content: 'summary_large_image'
             }, {
                 property: 'og:title',
-                content: project.title + ' | ' + config.siteTitle,
+                content: `völlig ohne projekt: ${project.title}`,
             }]
 
         } else {
