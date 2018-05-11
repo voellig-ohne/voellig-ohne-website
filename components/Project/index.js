@@ -3,7 +3,6 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import Image from 'components/ResponsiveImage';
 import classNames from 'classnames';
-import Helmet from 'react-helmet';
 import { config } from 'config';
 
 import style from './style.module.less';

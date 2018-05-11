@@ -2,6 +2,7 @@ import React from 'react';
 import { prefixLink } from 'gatsby-helpers';
 import piwikConfig from 'piwik';
 import { config } from 'config';
+import { map } from 'lodash';
 import Helmet from 'react-helmet';
 
 const BUILD_TIME = new Date().getTime();
@@ -17,6 +18,10 @@ export default class Main extends React.Component {
     }
     render() {
         const head = Helmet.rewind();
+        const metaStuff = map(head.meta.toComponent(), el => {
+            el.props['data-react-helmet'] = undefined;
+            return el;
+        });
 
         const piwikSetup = buildPiwikSetup(piwikConfig);
 
@@ -43,7 +48,7 @@ export default class Main extends React.Component {
                         href={`${config.domain}/rss.xml`}
                     />
                     {head.title.toComponent()}
-                    {head.meta.toComponent()}
+                    {metaStuff}
                     {css}
                 </head>
                 <body>
